@@ -102,9 +102,12 @@ export default class DateInput extends React.Component {
       required,
     } = this.props;
 
-    const displayText = displayValue || inputValue || dateString || placeholder || '';
     const value = inputValue || displayValue || dateString || '';
     const screenReaderMessageId = `DateInput__screen-reader-message-${id}`;
+    let displayText = displayValue || inputValue || dateString || placeholder || '';
+    if(value.includes('null')){
+      displayText = 'Select Date & Time';
+    }
 
     return (
       <div
