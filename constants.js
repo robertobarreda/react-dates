@@ -1,6 +1,6 @@
 module.exports = {
   DISPLAY_FORMAT: 'L',
-  ISO_FORMAT: 'YYYY-MM-DD',
+  ISO_FORMAT: 'YYYY-MM-DD HH:mm',
 
   START_DATE: 'startDate',
   END_DATE: 'endDate',

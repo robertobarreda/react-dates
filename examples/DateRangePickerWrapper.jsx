@@ -47,6 +47,8 @@ class DateRangePickerWrapper extends React.Component {
           startTime={startTime}
           endTime={endTime}
         />
+        this state: {typeof startDate} {typeof endDate} {typeof startTime} {typeof endTime}<br/>
+        this state: {startDate ? startDate.toString(): ""} {endDate ? endDate.toString(): ""} {startTime} {endTime}
       </div>
     );
   }

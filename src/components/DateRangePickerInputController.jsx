@@ -72,7 +72,7 @@ const defaultProps = {
   reopenPickerOnClearDates: false,
   withFullScreenPortal: false,
   isOutsideRange: day => !isInclusivelyAfterDay(day, moment()),
-  displayFormat: () => moment.localeData().longDateFormat('L'),
+  displayFormat: () => moment.localeData().longDateFormat('LT'),
 
   onFocusChange() {},
   onDatesChange() {},
@@ -219,21 +219,29 @@ export default class DateRangePickerInputWithHandlers extends React.Component {
       phrases,
     } = this.props;
 
+    //TODO why we have two different strings representation here here
     const startDateString = this.getDateString(startDate);
     const startDateValue = toISODateString(startDate);
+    console.log('------- zzzzz---------- toISODateString(startDate)', toISODateString(startDate));
+    console.log('------- zzzzz---------- startDateValue', startDateValue);
     const endDateString = this.getDateString(endDate);
     const endDateValue = toISODateString(endDate);
 
+    console.log('------- zzzzz---------- this.getDateString(endDate)', this.getDateString(endDate));
+    console.log('------- zzzzz---------- toISODateString(endDate)', toISODateString(endDate));
+    console.log('------- zzzzz---------- typeOf toISODateString(endDate)', typeof toISODateString(endDate));
+    console.log('------- zzzzz---------- typeOf this.getDateString(endDate)', typeof this.getDateString(endDate));
+
     return (
       <DateRangePickerInput
-        startDate={startDateString}
+        startDate={startDateValue}
         startTime={startTime}
         endTime={endTime}
         startDateValue={startDateValue}
         startDateId={startDateId}
         startDatePlaceholderText={startDatePlaceholderText}
         isStartDateFocused={isStartDateFocused}
-        endDate={endDateString}
+        endDate={endDateValue}
         endDateValue={endDateValue}
         endDateId={endDateId}
         endDatePlaceholderText={endDatePlaceholderText}

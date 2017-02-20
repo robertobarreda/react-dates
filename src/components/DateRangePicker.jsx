@@ -33,10 +33,10 @@ const defaultProps = {
   endDateId: END_DATE,
   focusedInput: null,
   screenReaderInputMessage: '',
-  minimumNights: 1,
+  minimumNights: 0,
   isDayBlocked: () => false,
   isDayHighlighted: () => false,
-  isOutsideRange: day => !isInclusivelyAfterDay(day, moment()),
+  isOutsideRange: day => null,//!isInclusivelyAfterDay(day, moment()),
   enableOutsideDays: false,
   numberOfMonths: 2,
   showClearDates: false,
@@ -64,7 +64,7 @@ const defaultProps = {
   onNextMonthClick() {},
 
   // i18n
-  displayFormat: () => moment.localeData().longDateFormat('L'),
+  displayFormat: () => moment.localeData().longDateFormat('L'),//moment.localeData().longDateFormat('LT'),
   monthFormat: 'MMMM YYYY',
   phrases: {
     closeDatePicker: 'Close',
@@ -80,6 +80,8 @@ export default class DateRangePicker extends React.Component {
     };
 
     this.onOutsideClick = this.onOutsideClick.bind(this);
+    this.selectLastHour = this.selectLastHour.bind(this);
+    this.selectLastWeek = this.selectLastWeek.bind(this);
 
     this.responsivizePickerPosition = this.responsivizePickerPosition.bind(this);
   }
@@ -152,6 +154,26 @@ export default class DateRangePicker extends React.Component {
         ),
       });
     }
+  }
+
+  selectLastHour(){
+    let end = moment(),
+        start = moment().add(-1, 'h');
+    //TODO move to utils use different format of the date
+    const startTime = start.format('HH:mm'),
+        endTime = end.format('HH:mm');
+    this.props.onDatesChange({startDate: start, endDate: end});
+    this.props.onTimeChange({startTime, endTime});
+  }
+
+  selectLastWeek(){
+    let end = moment(),
+        start = moment().add(-1, 'w');
+    //TODO move to utils use different format of the date
+    const startTime = start.format('HH:mm'),
+        endTime = end.format('HH:mm');
+    this.props.onDatesChange({startDate: start, endDate: end});
+    this.props.onTimeChange({startTime, endTime});
   }
 
   maybeRenderDayPickerWithPortal() {
@@ -317,6 +339,8 @@ export default class DateRangePicker extends React.Component {
 
           {this.maybeRenderDayPickerWithPortal()}
         </OutsideClickHandler>
+        <button onClick={this.selectLastHour}>last hour</button>
+        <button onClick={this.selectLastWeek}>last week</button>
       </div>
     );
   }
