@@ -58,7 +58,6 @@ const defaultProps = {
   withFullScreenPortal: false,
 
   onDatesChange() {},
-  onTimeChange() {},
   onFocusChange() {},
   onPrevMonthClick() {},
   onNextMonthClick() {},
@@ -68,15 +67,15 @@ const defaultProps = {
   monthFormat: 'MMMM YYYY',
   phrases: {
     closeDatePicker: 'Close',
-    clearDates: 'Clear Dates',
-  },
+    clearDates: 'Clear Dates'
+  }
 };
 
 export default class DateRangePicker extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      dayPickerContainerStyles: {},
+      dayPickerContainerStyles: {}
     };
 
     this.onOutsideClick = this.onOutsideClick.bind(this);
@@ -90,7 +89,10 @@ export default class DateRangePicker extends React.Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
+    //console.log('shouldComponentUpdate', nextProps, nextState)
+    return true;
+    /*TODO check if this can be a performance booster*/
+    //return shallowCompare(this, nextProps, nextState);
   }
 
   componentWillUnmount() {
@@ -122,7 +124,7 @@ export default class DateRangePicker extends React.Component {
       'DateRangePicker__picker--horizontal': orientation === HORIZONTAL_ORIENTATION,
       'DateRangePicker__picker--vertical': orientation === VERTICAL_ORIENTATION,
       'DateRangePicker__picker--portal': withPortal || withFullScreenPortal,
-      'DateRangePicker__picker--full-screen-portal': withFullScreenPortal,
+      'DateRangePicker__picker--full-screen-portal': withFullScreenPortal
     });
 
     return dayPickerClassName;
@@ -149,7 +151,7 @@ export default class DateRangePicker extends React.Component {
           currentOffset,
           containerEdge,
           horizontalMargin
-        ),
+        )
       });
     }
   }
@@ -181,7 +183,6 @@ export default class DateRangePicker extends React.Component {
       onPrevMonthClick,
       onNextMonthClick,
       onDatesChange,
-        onTimeChange,
       onFocusChange,
       withPortal,
       withFullScreenPortal,
@@ -190,8 +191,6 @@ export default class DateRangePicker extends React.Component {
       focusedInput,
       startDate,
       endDate,
-        startTime,
-        endTime,
       minimumNights,
       keepOpenOnDateSelect,
     } = this.props;
@@ -213,13 +212,10 @@ export default class DateRangePicker extends React.Component {
           onPrevMonthClick={onPrevMonthClick}
           onNextMonthClick={onNextMonthClick}
           onDatesChange={onDatesChange}
-          onTimeChange={onTimeChange}
           onFocusChange={onFocusChange}
           focusedInput={focusedInput}
           startDate={startDate}
           endDate={endDate}
-          startTime={startTime}
-          endTime={endTime}
           monthFormat={monthFormat}
           withPortal={withPortal || withFullScreenPortal}
           hidden={!focusedInput}
@@ -253,8 +249,6 @@ export default class DateRangePicker extends React.Component {
   render() {
     const {
       startDate,
-        startTime,
-        endTime,
       startDateId,
       startDatePlaceholderText,
       endDate,
@@ -276,7 +270,6 @@ export default class DateRangePicker extends React.Component {
       reopenPickerOnClearDates,
       keepOpenOnDateSelect,
       onDatesChange,
-      onTimeChange,
       onFocusChange,
     } = this.props;
 
@@ -287,8 +280,6 @@ export default class DateRangePicker extends React.Component {
         <OutsideClickHandler onOutsideClick={onOutsideClick}>
           <DateRangePickerInputController
             startDate={startDate}
-            startTime={startTime}
-            endTime={endTime}
             startDateId={startDateId}
             startDatePlaceholderText={startDatePlaceholderText}
             isStartDateFocused={focusedInput === START_DATE}
@@ -309,7 +300,6 @@ export default class DateRangePicker extends React.Component {
             isOutsideRange={isOutsideRange}
             withFullScreenPortal={withFullScreenPortal}
             onDatesChange={onDatesChange}
-            onTimeChange={onTimeChange}
             onFocusChange={onFocusChange}
             phrases={phrases}
             screenReaderMessage={screenReaderInputMessage}

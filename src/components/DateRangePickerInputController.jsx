@@ -46,8 +46,8 @@ const propTypes = {
 
   // i18n
   phrases: PropTypes.shape({
-    clearDates: PropTypes.node,
-  }),
+    clearDates: PropTypes.node
+  })
 };
 
 const defaultProps = {
@@ -82,8 +82,8 @@ const defaultProps = {
 
   // i18n
   phrases: {
-    clearDates: 'Clear Dates',
-  },
+    clearDates: 'Clear Dates'
+  }
 };
 
 export default class DateRangePickerInputWithHandlers extends React.Component {
@@ -121,7 +121,7 @@ export default class DateRangePickerInputWithHandlers extends React.Component {
     } else {
       onDatesChange({
         startDate,
-        endDate: null,
+        endDate: null
       });
     }
   }
@@ -155,19 +155,11 @@ export default class DateRangePickerInputWithHandlers extends React.Component {
     } else {
       onDatesChange({
         startDate: null,
-        endDate,
+        endDate
       });
     }
   }
 
-  onStartTimeChange(startTimeString){
-    //const startTime = startTimeString;
-    console.log('startTime changed', startTimeString);
-    onTimeChange({
-      startTime
-    })
-
-  }
 
   onStartDateFocus() {
     if (!this.props.disabled) {
@@ -199,8 +191,6 @@ export default class DateRangePickerInputWithHandlers extends React.Component {
   render() {
     const {
       startDate,
-        startTime,
-        endTime,
       startDateId,
       startDatePlaceholderText,
       isStartDateFocused,
@@ -219,24 +209,15 @@ export default class DateRangePickerInputWithHandlers extends React.Component {
       phrases,
     } = this.props;
 
-    //TODO why we have two different strings representation here here
+    /* TODO why we have two different strings representation are here */
     const startDateString = this.getDateString(startDate);
     const startDateValue = toISODateString(startDate);
-    console.log('------- zzzzz---------- toISODateString(startDate)', toISODateString(startDate));
-    console.log('------- zzzzz---------- startDateValue', startDateValue);
     const endDateString = this.getDateString(endDate);
     const endDateValue = toISODateString(endDate);
-
-    console.log('------- zzzzz---------- this.getDateString(endDate)', this.getDateString(endDate));
-    console.log('------- zzzzz---------- toISODateString(endDate)', toISODateString(endDate));
-    console.log('------- zzzzz---------- typeOf toISODateString(endDate)', typeof toISODateString(endDate));
-    console.log('------- zzzzz---------- typeOf this.getDateString(endDate)', typeof this.getDateString(endDate));
 
     return (
       <DateRangePickerInput
         startDate={startDateValue}
-        startTime={startTime}
-        endTime={endTime}
         startDateValue={startDateValue}
         startDateId={startDateId}
         startDatePlaceholderText={startDatePlaceholderText}

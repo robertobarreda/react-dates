@@ -15,38 +15,22 @@ export default class TimePicker extends React.Component {
         this.onMinutesChange = this.onMinutesChange.bind(this);
     }
 
-    getMomentObjectFromTimeString(timeString){
-        return moment(timeString, 'HH:mm');
-    }
-
-    getStringFromMoment(momentObj){
-        return momentObj.format('HH:mm');
-    }
-
     onHourChange(value){
-        if(!this.time){
-            this.time = moment();
-        }
         this.time.hours(value);
-        let time = this.getStringFromMoment(this.time);
-        this.props.onTimeChange(time);
+        this.props.onTimeChange(this.time);
     }
 
     onMinutesChange(value){
         this.time.minutes(value);
-        let time = this.getStringFromMoment(this.time);
-        this.onTimeChange(time);
-    }
-
-    getMinutesFromTime(){
-        moment().hour()
+        this.props.onTimeChange(this.time);
     }
 
     render() {
-        const { label, disabled } = this.props;
-        this.time = this.getMomentObjectFromTimeString(this.props.time);
-        this.hours = this.time.hours();
-        this.minutes = this.time.minutes();
+        const { label, disabled, datetime } = this.props;
+        this.time = datetime;
+        this.hours = datetime ? datetime.hours(): "";
+        this.minutes = datetime ? datetime.minutes(): "";
+
         return (
             <div className={"time-picker" + (disabled ? " disabled": "")}>
 
@@ -54,15 +38,11 @@ export default class TimePicker extends React.Component {
                     {label}</span>
                 <TimeInputSelector
                     value={this.hours}
-                    min="0"
-                    max="23"
                     onClick={this.onHourChange}/>
                 <div className="time-picker--align-middle">:</div>
                 <TimeInputSelector
                     value={this.minutes}
                     step="30"
-                    min="0"
-                    max="59"
                     onClick={this.onMinutesChange}/>
             </div>
         );

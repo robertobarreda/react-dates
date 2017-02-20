@@ -50,7 +50,7 @@ const propTypes = {
   onOutsideClick: PropTypes.func,
 
   // i18n
-  monthFormat: PropTypes.string,
+  monthFormat: PropTypes.string
 };
 
 const defaultProps = {
@@ -84,14 +84,14 @@ const defaultProps = {
   onOutsideClick() {},
 
   // i18n
-  monthFormat: 'MMMM YYYY',
+  monthFormat: 'MMMM YYYY'
 };
 
 export default class DayPickerRangeController extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      hoverDate: null,
+      hoverDate: null
     };
 
     this.isTouchDevice = isTouchDevice();
@@ -144,7 +144,7 @@ export default class DayPickerRangeController extends React.Component {
     if (this.isTouchDevice) return;
 
     this.setState({
-      hoverDate: day,
+      hoverDate: day
     });
   }
 
@@ -152,7 +152,7 @@ export default class DayPickerRangeController extends React.Component {
     if (this.isTouchDevice) return;
 
     this.setState({
-      hoverDate: null,
+      hoverDate: null
     });
   }
 
@@ -223,11 +223,9 @@ export default class DayPickerRangeController extends React.Component {
   render() {
     const {
       isDayBlocked,
-        startTime,
-        endTime,
         startDate,
         endDate,
-        onTimeChange,
+        onDatesChange,
       isDayHighlighted,
       isOutsideRange,
       numberOfMonths,
@@ -263,14 +261,13 @@ export default class DayPickerRangeController extends React.Component {
       // once a start date and end date have been set
       'selected-start': day => this.isStartDate(day),
       'selected-end': day => this.isEndDate(day),
-      'selected-span': day => this.isInSelectedSpan(day),
+      'selected-span': day => this.isInSelectedSpan(day)
     };
 
     return (
         <div>
           <DayPicker
               ref={(ref) => { this.dayPicker = ref; }}
-              displayTimeValue={startTime}
               orientation={orientation}
               enableOutsideDays={enableOutsideDays}
               modifiers={modifiers}
@@ -291,9 +288,7 @@ export default class DayPickerRangeController extends React.Component {
           <TimeRangeController
               startDate={startDate}
               endDate={endDate}
-              startTime={startTime}
-              onTimeChange={onTimeChange}
-              endTime={endTime}
+              onDatesChange={onDatesChange}
           />
         </div>
     );

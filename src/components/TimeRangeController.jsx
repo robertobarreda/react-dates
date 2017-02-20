@@ -10,46 +10,30 @@ export default class TimeRangeController extends React.Component {
         this.onEndTimeChange = this.onEndTimeChange.bind(this);
     }
 
-    componentDidMount(){
-        let { startTime, endTime } = this.props;
-        let newStartTime = startTime ? startTime : '00:00',
-        newEndTime = endTime ? endTime: '00:00';
-        this.props.onTimeChange({startTime: newStartTime, endTime: newEndTime});
-    }
-
     onStartTimeChange(time){
-        let  { endTime, endTime2, startTime2 }  = this.props,
-          startTime  = time;
-        this.props.onTimeChange({ startTime, endTime });
-
-        /*let startDate = startTime2.hours(time.substr(0,2));
-        startDate.minutes(time.substr(3,2));
-
-        console.log('FROM onStartTimeChange 2', startDate);
-        console.log('FROM onStartTimeChange 2 time.split(0,2)', time.substr(3,2));*/
-        //this.props.onTimeChange2({ startDate: startDate, endDate: endTime2 });
+        let  { endDate }  = this.props;
+        this.props.onDatesChange({startDate: time, endDate});
     }
 
     onEndTimeChange(time){
-        let { startTime } = this.props,
-          endTime  = time;
-        this.props.onTimeChange({ startTime, endTime });
+        let { startDate } = this.props;
+        this.props.onDatesChange({startDate, endDate: time});
     }
 
     render() {
-        const { startTime, endTime, startDate, endDate } = this.props;
+        const {startDate, endDate } = this.props;
         return (
             <form style={{ display: 'flex'}}>
                 <TimePicker
                     disabled={!startDate}
                     label="Start time"
-                    time={this.props.startTime}
+                    datetime={startDate}
                     onTimeChange={this.onStartTimeChange}
                 />
                 <TimePicker
                     disabled={!endDate}
+                    datetime={endDate}
                     label="End time"
-                    time={this.props.endTime}
                     onTimeChange={this.onEndTimeChange}
                 />
             </form>
