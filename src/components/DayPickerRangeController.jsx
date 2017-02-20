@@ -225,6 +225,8 @@ export default class DayPickerRangeController extends React.Component {
       isDayBlocked,
         startTime,
         endTime,
+        startDate,
+        endDate,
         onTimeChange,
       isDayHighlighted,
       isOutsideRange,
@@ -266,11 +268,6 @@ export default class DayPickerRangeController extends React.Component {
 
     return (
         <div>
-          <TimeRangeController
-              startTime={startTime}
-              onTimeChange={onTimeChange}
-              endTime={endTime}
-          />
           <DayPicker
               ref={(ref) => { this.dayPicker = ref; }}
               displayTimeValue={startTime}
@@ -290,6 +287,13 @@ export default class DayPickerRangeController extends React.Component {
               onOutsideClick={onOutsideClick}
               navPrev={navPrev}
               navNext={navNext}
+          />
+          <TimeRangeController
+              startDate={startDate}
+              endDate={endDate}
+              startTime={startTime}
+              onTimeChange={onTimeChange}
+              endTime={endTime}
           />
         </div>
     );

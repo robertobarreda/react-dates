@@ -43,12 +43,13 @@ export default class TimePicker extends React.Component {
     }
 
     render() {
-        const { label } = this.props;
+        const { label, disabled } = this.props;
         this.time = this.getMomentObjectFromTimeString(this.props.time);
         this.hours = this.time.hours();
         this.minutes = this.time.minutes();
         return (
-            <div className="time-picker">
+            <div className={"time-picker" + (disabled ? " disabled": "")}>
+
                 <span className="time-picker__label time-picker--align-middle">
                     {label}</span>
                 <TimeInputSelector

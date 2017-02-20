@@ -51,3 +51,18 @@
 .DateInput{
   text-align: center;
 }
+
+/* disabled time selection */
+$disabled-color: #c6c6c6;
+.disabled{
+  color: $disabled-color;
+  font-weight: 100;
+  pointer-events: none;
+  .btn-icon {
+    color: $disabled-color;
+  }
+  .time-selector__input {
+    border-color: $disabled-color;
+    color: $disabled-color;
+  }
+}
