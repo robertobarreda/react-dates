@@ -18,9 +18,16 @@ export default class TimeRangeController extends React.Component {
     }
 
     onStartTimeChange(time){
-        let  { endTime }  = this.props,
+        let  { endTime, endTime2, startTime2 }  = this.props,
           startTime  = time;
         this.props.onTimeChange({ startTime, endTime });
+
+        /*let startDate = startTime2.hours(time.substr(0,2));
+        startDate.minutes(time.substr(3,2));
+
+        console.log('FROM onStartTimeChange 2', startDate);
+        console.log('FROM onStartTimeChange 2 time.split(0,2)', time.substr(3,2));*/
+        //this.props.onTimeChange2({ startDate: startDate, endDate: endTime2 });
     }
 
     onEndTimeChange(time){
