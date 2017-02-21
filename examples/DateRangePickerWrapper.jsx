@@ -9,7 +9,8 @@ class DateRangePickerWrapper extends React.Component {
     this.state = {
       focusedInput: null,
       startDate: null,
-      endDate: null
+      endDate: null,
+      timeNotValid: false
     };
 
     this.onDatesChange = this.onDatesChange.bind(this);
@@ -21,6 +22,9 @@ class DateRangePickerWrapper extends React.Component {
 
   onDatesChange({ startDate, endDate }) {
     this.setState({ startDate, endDate });
+    //validation
+    this.setState({timeNotValid: startDate.isSame(endDate)});
+    console.log('startDate.isSame(endDate)', startDate.isSame(endDate));
   }
 
 
@@ -28,13 +32,13 @@ class DateRangePickerWrapper extends React.Component {
   selectLastHour(){
     let end = moment(),
         start = moment().add(-1, 'h');
-    this.setState({startDate: start, endDate: end});
+    this.onDatesChange({startDate: start, endDate: end});
   }
 
   selectLastWeek(){
     let end = moment(),
         start = moment().add(-1, 'w');
-    this.setState({startDate: start, endDate: end});
+    this.onDatesChange({startDate: start, endDate: end});
   }
 
 
@@ -59,6 +63,7 @@ class DateRangePickerWrapper extends React.Component {
         <button onClick={this.selectLastHour}>last hour</button>
         <button onClick={this.selectLastWeek}>last week</button>
         <br/>
+        <div className={"time-not-valid " + (this.state.timeNotValid ? "show": "hide")}>Validation message</div>
         <div>
           this state: {startDate ? startDate.toString(): ""} {endDate ? endDate.toString(): ""}
         </div>

@@ -66,3 +66,14 @@ $disabled-color: #c6c6c6;
     color: $disabled-color;
   }
 }
+
+
+.time-not-valid{
+  color: tomato;
+  &.show{
+    display: inline-block;
+  }
+  &.hide{
+    display: none;
+  }
+}
