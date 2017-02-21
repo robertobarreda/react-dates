@@ -38,9 +38,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/airbnb/react-dates.git"
+    "url": "git+https://gitlab.com/starflownetworks/react-date-time.git"
   },
-  "author": "Maja Wichrowska <maja.wichrowska@airbnb.com>",
+  "author": "",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/airbnb/react-dates/issues"
