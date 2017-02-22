@@ -7,6 +7,8 @@
 .CalendarDay__day {
   display: table-cell;
   vertical-align: middle;
+  text-align: center;
+  font-size: 14px;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -157,8 +159,8 @@
 
 .DayPicker--horizontal {
   background: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.07);
-  border-radius: 3px; }
+  /*box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.07);
+  border-radius: 3px;*/ }
   .DayPicker--horizontal.DayPicker--portal {
     box-shadow: none;
     position: absolute;
@@ -358,10 +360,12 @@
   color: #484848; }
 
 .DateInput__display-text--focused {
-  background: #99ede6;
-  border-color: #99ede6;
+  /*background: $react-dates-color-focus;
+  border-color: $react-dates-color-focus;*/
+  border: solid transparent;
+  border-bottom: solid #99ede6;
   border-radius: 3px;
-  color: #007a87; }
+  /*color: $react-dates-color-text-focus;*/ }
 
 .DateInput__display-text--disabled {
   font-style: italic; }
@@ -384,7 +388,9 @@
   z-index: 1;
   background-color: #fff;
   position: absolute;
-  top: 72px; }
+  top: 72px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.07);
+  border-radius: 3px; }
 
 .DateRangePicker__picker--show {
   visibility: visible; }
@@ -416,7 +422,6 @@
   font: inherit;
   line-height: normal;
   overflow: visible;
-  padding: 0;
   cursor: pointer;
   position: absolute;
   top: 0;
@@ -580,10 +585,14 @@
   background: #dbdbdb;
   border-radius: 50%; }
 
+.time-picker__container {
+  display: flex;
+  border-top: solid 1px #dce0e0; }
+
 .time-picker {
   display: inline-block;
   width: 50%;
-  padding: 10px 5px;
+  /*padding: 10px 5px;*/
   text-align: center; }
   .time-picker__label {
     font-family: system-ui;
@@ -611,7 +620,7 @@
     .time-selector__btn--move-down {
       padding-top: 4px; }
   .time-selector__input {
-    border: solid 1px #afadad;
+    border: solid 1px #dce0e0;
     border-radius: 3px;
     height: 30px;
     text-align: center;
@@ -619,11 +628,7 @@
     width: 35px;
     padding: 3px;
     font-size: 14px;
-    color: #565a5c; }
-
-/* Changes done because time was added to input */
-.DateInput {
-  text-align: center; }
+    color: #757575; }
 
 /* disabled time selection */
 .disabled {
@@ -636,9 +641,14 @@
     border-color: #c6c6c6;
     color: #c6c6c6; }
 
+/* validations styles */
 .time-not-valid {
   color: tomato; }
   .time-not-valid.show {
     display: inline-block; }
   .time-not-valid.hide {
     display: none; }
+
+/* Changes done because time was added to input */
+.DateInput {
+  text-align: center; }
