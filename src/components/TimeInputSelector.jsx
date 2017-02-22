@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import FontAwesome from 'react-fontawesome';
+import FontIcon from 'react-md/lib/FontIcons';
 
 export default class TimeInputSelector extends React.Component {
 
@@ -47,8 +47,8 @@ export default class TimeInputSelector extends React.Component {
                 <button type="button"
                         className="time-selector__btn"
                         onClick={this.incrementValue}>
-                    <FontAwesome name='angle-up'
-                                 className="btn-icon btn-icon--move-up"/>
+                    <FontIcon iconClassName="mdi mdi-chevron-up"
+                              className="btn-icon btn-icon--move-up"/>
                 </button>
                 <input type="text"
                        className="time-selector__input"
@@ -57,8 +57,8 @@ export default class TimeInputSelector extends React.Component {
                 <button type="button"
                         className="time-selector__btn"
                         onClick={this.decrementValue}>
-                    <FontAwesome name='angle-down'
-                             className="btn-icon btn-icon--move-down"/>
+                    <FontIcon iconClassName="mdi mdi-chevron-down"
+                              className="btn-icon btn-icon--move-down"/>
                 </button>
             </div>
         );
