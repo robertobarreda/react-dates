@@ -23,7 +23,7 @@ export default class TimeRangeController extends React.Component {
     render() {
         const {startDate, endDate } = this.props;
         return (
-            <form style={{ display: 'flex'}}>
+            <div className="time-picker__container">
                 <TimePicker
                     disabled={!startDate}
                     label="Start time"
@@ -36,7 +36,7 @@ export default class TimeRangeController extends React.Component {
                     label="End time"
                     onTimeChange={this.onEndTimeChange}
                 />
-            </form>
+            </div>
         );
     }
 }

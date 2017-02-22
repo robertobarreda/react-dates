@@ -1,7 +1,13 @@
+@import 'variables';
+
+.time-picker__container{
+  display: flex;
+  border-top: solid 1px $react-dates-color-border-light;
+}
 .time-picker{
   display: inline-block;
   width: 50%;
-  padding: 10px 5px;
+  /*padding: 10px 5px;*/
   text-align: center;
   &__label{
     font-family: system-ui;
@@ -24,7 +30,7 @@
     width: 100%;
     .btn-icon {
       font-size: 20px;
-      color: #00a699;
+      color: $react-dates-color-primary;
       font-weight: bold;
     }
     &--move-up{
@@ -35,7 +41,7 @@
     }
   }
   &__input{
-    border: solid 1px #afadad;
+    border: solid 1px $react-dates-color-border-light;
     border-radius: 3px;
     height: 30px;
     text-align: center;
@@ -43,37 +49,36 @@
     width: 35px;
     padding: 3px;
     font-size: 14px;
-    color: #565a5c;
+    color: $react-dates-color-placeholder-text;
   }
-}
-
-/* Changes done because time was added to input */
-.DateInput{
-  text-align: center;
 }
 
 /* disabled time selection */
-$disabled-color: #c6c6c6;
 .disabled{
-  color: $disabled-color;
+  color: $react-dates-disabled-color;
   font-weight: 100;
   pointer-events: none;
   .btn-icon {
-    color: $disabled-color;
+    color: $react-dates-disabled-color;
   }
   .time-selector__input {
-    border-color: $disabled-color;
-    color: $disabled-color;
+    border-color: $react-dates-disabled-color;
+    color: $react-dates-disabled-color;
   }
 }
 
-
+/* validations styles */
 .time-not-valid{
-  color: tomato;
+  color: $react-dates-validation-color;
   &.show{
     display: inline-block;
   }
   &.hide{
     display: none;
   }
+}
+
+/* Changes done because time was added to input */
+.DateInput{
+  text-align: center;
 }

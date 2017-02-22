@@ -63,10 +63,12 @@ $caret-top: $react-dates-spacing-vertical-picker - $react-dates-width-tooltip-ar
 }
 
 .DateInput__display-text--focused {
-  background: $react-dates-color-focus;
-  border-color: $react-dates-color-focus;
+  /*background: $react-dates-color-focus;
+  border-color: $react-dates-color-focus;*/
+  border: solid transparent;
+  border-bottom: solid $react-dates-color-focus;
   border-radius: 3px;
-  color: $react-dates-color-text-focus;
+  /*color: $react-dates-color-text-focus;*/
 }
 
 .DateInput__display-text--disabled {
