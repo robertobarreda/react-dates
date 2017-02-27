@@ -6,38 +6,36 @@ export default class TimeInputSelector extends React.Component {
     constructor(props) {
         super(props);
         this.value = null;
-        this.displayValue = null;
         this.step = 1;
-        this.min = null;
-        this.max = null;
         this.onValueChange = this.props.onClick;
 
-        this.incrementValue =this.incrementValue.bind(this);
-        this.decrementValue =this.decrementValue.bind(this);
-    }
-
-    getDisplayValue(value){
-        return this.fillWith0();
-    }
-    fillWith0(){
-        if(this.value.toString().length == 1){
-            return '0' + this.value.toString();
-        }
-        return this.value;
+        this.incrementValue = this.incrementValue.bind(this);
+        this.decrementValue = this.decrementValue.bind(this);
+        this.handleInputChange = this.handleInputChange.bind(this);
     }
 
     incrementValue(){
-        this.value = this.value + this.step;
-        this.onValueChange(this.value);
+        this.value = this.value + this.step
+        this.onValueChange(this.value)
     }
     decrementValue(){
-        this.value = this.value - this.step;
-        this.onValueChange(this.value);
+        this.value = this.value - this.step
+        this.onValueChange(this.value)
     }
+    handleInputChange(event){
+        const minNum = parseInt(this.props.min)
+        const maxNum = parseInt(this.props.max)
+        const value = event.target.value
+
+        //check if it's corrected number in a range
+        if((!isNaN(value) && value >= minNum && value <= maxNum ) || value == ''){
+            this.onValueChange(event.target.value)
+        } //else update will be prevented
+    }
+
 
     render() {
         this.value = this.props.value;
-        this.displayValue = this.getDisplayValue();
 
         if(this.props.step){
             this.step = parseInt(this.props.step);
@@ -52,7 +50,8 @@ export default class TimeInputSelector extends React.Component {
                 </button>
                 <input type="text"
                        className="time-selector__input"
-                       value={this.displayValue}
+                       onChange={this.handleInputChange}
+                       value={this.props.value}
                        name="startTimeHours"/>
                 <button type="button"
                         className="time-selector__btn"
