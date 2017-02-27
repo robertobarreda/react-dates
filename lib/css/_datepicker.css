@@ -370,6 +370,12 @@
 .DateInput__display-text--disabled {
   font-style: italic; }
 
+.DateInput__display-text--focused.DateInput__display-text--not-valid {
+  border-bottom: solid tomato; }
+
+.DateInput__display-text--not-valid {
+  color: tomato; }
+
 .screen-reader-only {
   border: 0;
   clip: rect(0, 0, 0, 0);
@@ -438,7 +444,6 @@
 
 .DateRangePickerInput {
   background-color: #fff;
-  border: 1px solid #cacccd;
   display: inline-block; }
 
 .DateRangePickerInput--disabled {
@@ -652,3 +657,12 @@
 /* Changes done because time was added to input */
 .DateInput {
   text-align: center; }
+
+.time-not-valid .time-picker__label, .time-not-valid .time-picker--align-middle, .time-not-valid .time-selector__btn, .time-not-valid .time-selector__input {
+  color: tomato; }
+
+.time-not-valid .time-selector__input {
+  border-color: tomato; }
+
+.time-not-valid .time-selector__input:focus {
+  outline: tomato auto 3px; }

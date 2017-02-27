@@ -1,3 +1,4 @@
+@import "variables";
 $caret-top: $react-dates-spacing-vertical-picker - $react-dates-width-tooltip-arrow / 2;
 
 .DateInput {
@@ -73,4 +74,11 @@ $caret-top: $react-dates-spacing-vertical-picker - $react-dates-width-tooltip-ar
 
 .DateInput__display-text--disabled {
   font-style: italic;
+}
+
+.DateInput__display-text--focused.DateInput__display-text--not-valid {
+  border-bottom: solid $react-dates-validation-color;
+}
+.DateInput__display-text--not-valid{
+    color: $react-dates-validation-color;
 }

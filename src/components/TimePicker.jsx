@@ -26,13 +26,14 @@ export default class TimePicker extends React.Component {
     }
 
     render() {
-        const { label, disabled, datetime } = this.props;
+        const { label, disabled, datetime, timeNotValid } = this.props;
         this.time = datetime;
         this.hours = datetime ? datetime.hours(): "";
         this.minutes = datetime ? datetime.minutes(): "";
 
         return (
-            <div className={"time-picker" + (disabled ? " disabled": "")}>
+            <div className={"time-picker " + (disabled ? "disabled": "") +
+                (timeNotValid ? "time-not-valid": "")}>
 
                 <span className="time-picker__label time-picker--align-middle">
                     {label}</span>

@@ -193,6 +193,7 @@ export default class DateRangePicker extends React.Component {
       endDate,
       minimumNights,
       keepOpenOnDateSelect,
+        timeNotValid
     } = this.props;
     const { dayPickerContainerStyles } = this.state;
 
@@ -228,6 +229,7 @@ export default class DateRangePicker extends React.Component {
           isDayHighlighted={isDayHighlighted}
           isDayBlocked={isDayBlocked}
           keepOpenOnDateSelect={keepOpenOnDateSelect}
+          timeNotValid={timeNotValid}
         />
 
         {withFullScreenPortal &&
@@ -271,6 +273,7 @@ export default class DateRangePicker extends React.Component {
       keepOpenOnDateSelect,
       onDatesChange,
       onFocusChange,
+        timeNotValid
     } = this.props;
 
     const onOutsideClick = (!withPortal && !withFullScreenPortal) ? this.onOutsideClick : undefined;
@@ -303,6 +306,7 @@ export default class DateRangePicker extends React.Component {
             onFocusChange={onFocusChange}
             phrases={phrases}
             screenReaderMessage={screenReaderInputMessage}
+            timeNotValid={timeNotValid}
           />
 
           {this.maybeRenderDayPickerWithPortal()}

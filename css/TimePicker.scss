@@ -5,22 +5,22 @@
   border-top: solid 1px $react-dates-color-border-light;
 }
 .time-picker{
-  display: inline-block;
-  width: 50%;
-  /*padding: 10px 5px;*/
+  display: table;
+  width: 30%;
+  margin: auto;
   text-align: center;
   &__label{
     font-family: system-ui;
     padding-right: 10px;
   }
   &--align-middle{
-    display: inline-block;
-    height: 80%;
+    display: table-cell;
+    /*height: 80%;*/
     vertical-align: middle;
   }
 }
 .time-selector{
-  display: inline-block;
+  display: table-cell;
   padding: 10px 5px;
   text-align: center;
   &__btn {
@@ -81,4 +81,17 @@
 /* Changes done because time was added to input */
 .DateInput{
   text-align: center;
+}
+
+.time-not-valid {
+  .time-picker__label, .time-picker--align-middle, .time-selector__input,
+  .time-selector__btn .btn-icon{
+    color: $react-dates-validation-color;
+  }
+  .time-selector__input{
+    border-color: $react-dates-validation-color;
+  }
+  .time-selector__input:focus{
+    outline: $react-dates-validation-color auto 3px;
+  }
 }

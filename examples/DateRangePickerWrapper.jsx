@@ -4,6 +4,7 @@ import moment from 'moment';
 import DateRangePicker from '../src/components/DateRangePicker';
 
 class DateRangePickerWrapper extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -50,8 +51,11 @@ class DateRangePickerWrapper extends React.Component {
     const { focusedInput, startDate, endDate} = this.state;
     return (
       <div>
+        this.state.timeNotValid {this.state.timeNotValid.toString()} <br />
+
         <DateRangePicker
           {...this.props}
+            timeNotValid={this.state.timeNotValid}
             keepOpenOnDateSelect
           onDatesChange={this.onDatesChange}
           onFocusChange={this.onFocusChange}

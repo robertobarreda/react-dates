@@ -100,6 +100,7 @@ export default class DateInput extends React.Component {
       onFocus,
       disabled,
       required,
+        timeNotValid
     } = this.props;
 
     const value = inputValue || displayValue || dateString || '';
@@ -109,6 +110,7 @@ export default class DateInput extends React.Component {
       displayText = 'Select Date & Time';
     }
 
+    console.log('timeNotValid', timeNotValid);
     return (
       <div
         className={cx('DateInput', {
@@ -146,6 +148,7 @@ export default class DateInput extends React.Component {
             'DateInput__display-text--has-input': !!value,
             'DateInput__display-text--focused': focused,
             'DateInput__display-text--disabled': disabled,
+            'DateInput__display-text--not-valid': timeNotValid
           })}
         >
           {displayText}

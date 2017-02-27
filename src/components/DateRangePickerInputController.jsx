@@ -207,6 +207,7 @@ export default class DateRangePickerInputWithHandlers extends React.Component {
       disabled,
       required,
       phrases,
+        timeNotValid
     } = this.props;
 
     /* TODO why we have two different strings representation are here */
@@ -217,6 +218,7 @@ export default class DateRangePickerInputWithHandlers extends React.Component {
 
     return (
       <DateRangePickerInput
+          timeNotValid={timeNotValid}
         startDate={startDateValue}
         startDateValue={startDateValue}
         startDateId={startDateId}

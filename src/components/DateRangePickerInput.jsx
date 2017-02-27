@@ -132,6 +132,7 @@ export default class DateRangePickerInput extends React.Component {
       customInputIcon,
       customArrowIcon,
       phrases,
+        timeNotValid
     } = this.props;
 
     const inputIcon = customInputIcon || (<CalendarIcon />);
@@ -161,6 +162,7 @@ export default class DateRangePickerInput extends React.Component {
           disabled={disabled}
           required={required}
           showCaret={showCaret}
+          timeNotValid={timeNotValid}
 
           onChange={onStartDateChange}
           onFocus={onStartDateFocus}
@@ -181,6 +183,7 @@ export default class DateRangePickerInput extends React.Component {
           disabled={disabled}
           required={required}
           showCaret={showCaret}
+          timeNotValid={timeNotValid}
 
           onChange={onEndDateChange}
           onFocus={onEndDateFocus}

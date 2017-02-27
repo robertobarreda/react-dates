@@ -1,6 +1,6 @@
 {
   "name": "react-date-time",
-  "version": "1.0.0",
+  "version": "1.0.03",
   "description": "Date time range picker build on top of AirBnb date range picker",
   "main": "index.js",
   "scripts": {
