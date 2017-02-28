@@ -595,20 +595,20 @@
   border-top: solid 1px #dce0e0; }
 
 .time-picker {
-  display: inline-block;
-  width: 50%;
-  /*padding: 10px 5px;*/
+  display: table;
+  width: 30%;
+  margin: auto;
   text-align: center; }
   .time-picker__label {
     font-family: system-ui;
     padding-right: 10px; }
   .time-picker--align-middle {
-    display: inline-block;
-    height: 80%;
+    display: table-cell;
+    /*height: 80%;*/
     vertical-align: middle; }
 
 .time-selector {
-  display: inline-block;
+  display: table-cell;
   padding: 10px 5px;
   text-align: center; }
   .time-selector__btn {
@@ -658,7 +658,8 @@
 .DateInput {
   text-align: center; }
 
-.time-not-valid .time-picker__label, .time-not-valid .time-picker--align-middle, .time-not-valid .time-selector__btn, .time-not-valid .time-selector__input {
+.time-not-valid .time-picker__label, .time-not-valid .time-picker--align-middle, .time-not-valid .time-selector__input,
+.time-not-valid .time-selector__btn .btn-icon {
   color: tomato; }
 
 .time-not-valid .time-selector__input {

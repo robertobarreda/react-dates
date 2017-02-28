@@ -37,8 +37,6 @@ export default class TimePicker extends React.Component {
         this.time = datetime;
         this.hours = datetime ? this.fillWith0(datetime.hours()): "";
         this.minutes = datetime ? this.fillWith0(datetime.minutes()): "";
-
-        console.log('this.hours', this.hours);
         return (
             <div className={"time-picker " + (disabled ? "disabled": "") +
                 (timeNotValid ? "time-not-valid": "")}>

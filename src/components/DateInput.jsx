@@ -110,7 +110,6 @@ export default class DateInput extends React.Component {
       displayText = 'Select Date & Time';
     }
 
-    console.log('timeNotValid', timeNotValid);
     return (
       <div
         className={cx('DateInput', {
