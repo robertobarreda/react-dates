@@ -33,7 +33,7 @@ export default class TimePicker extends React.Component {
     }
 
     render() {
-        const { label, disabled, datetime, timeNotValid } = this.props;
+        const { label, disabled, datetime, timeNotValid, step } = this.props;
         this.time = datetime;
         this.hours = datetime ? this.fillWith0(datetime.hours()): "";
         this.minutes = datetime ? this.fillWith0(datetime.minutes()): "";
@@ -52,7 +52,7 @@ export default class TimePicker extends React.Component {
                 <div className="time-picker--align-middle">:</div>
                 <TimeInputSelector
                     value={this.minutes}
-                    step="15"
+                    step={step}
                     min="0"
                     max="59"
                     onTimeInputChange={this.props.onTimeChange}

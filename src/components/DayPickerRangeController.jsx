@@ -240,7 +240,8 @@ export default class DayPickerRangeController extends React.Component {
       enableOutsideDays,
       initialVisibleMonth,
       focusedInput,
-        timeNotValid
+        timeNotValid,
+        timeStep
     } = this.props;
 
     const modifiers = {
@@ -287,6 +288,7 @@ export default class DayPickerRangeController extends React.Component {
               navNext={navNext}
           />
           <TimeRangeController
+              step={timeStep}
               timeNotValid={timeNotValid}
               startDate={startDate}
               endDate={endDate}

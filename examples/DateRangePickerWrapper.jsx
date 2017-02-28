@@ -56,6 +56,7 @@ class DateRangePickerWrapper extends React.Component {
           {...this.props}
             timeNotValid={this.state.timeNotValid}
             keepOpenOnDateSelect
+            timeStep="10"
           onDatesChange={this.onDatesChange}
           onFocusChange={this.onFocusChange}
           focusedInput={focusedInput}

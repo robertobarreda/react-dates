@@ -193,7 +193,8 @@ export default class DateRangePicker extends React.Component {
       endDate,
       minimumNights,
       keepOpenOnDateSelect,
-        timeNotValid
+        timeNotValid,
+        timeStep
     } = this.props;
     const { dayPickerContainerStyles } = this.state;
 
@@ -230,6 +231,7 @@ export default class DateRangePicker extends React.Component {
           isDayBlocked={isDayBlocked}
           keepOpenOnDateSelect={keepOpenOnDateSelect}
           timeNotValid={timeNotValid}
+          timeStep={timeStep}
         />
 
         {withFullScreenPortal &&

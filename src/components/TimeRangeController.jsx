@@ -21,7 +21,7 @@ export default class TimeRangeController extends React.Component {
     }
 
     render() {
-        const {startDate, endDate, timeNotValid } = this.props;
+        const {startDate, endDate, timeNotValid, step } = this.props;
         return (
             <div className="time-picker__container">
                 <TimePicker
@@ -29,6 +29,7 @@ export default class TimeRangeController extends React.Component {
                     label="Start time"
                     datetime={startDate}
                     onTimeChange={this.onStartTimeChange}
+                    step={step}
                 />
                 <TimePicker
                     timeNotValid={timeNotValid}
@@ -36,6 +37,7 @@ export default class TimeRangeController extends React.Component {
                     datetime={endDate}
                     label="End time"
                     onTimeChange={this.onEndTimeChange}
+                    step={step}
                 />
             </div>
         );
