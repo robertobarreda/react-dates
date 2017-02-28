@@ -24,7 +24,7 @@ class DateRangePickerWrapper extends React.Component {
   onDatesChange({ startDate, endDate }) {
     this.setState({ startDate, endDate });
     //validation
-    this.setState({timeNotValid: startDate.isSame(endDate)});
+    this.setState({timeNotValid: startDate.isSameOrAfter(endDate)});
   }
 
 
