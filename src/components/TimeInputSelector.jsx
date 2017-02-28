@@ -17,7 +17,7 @@ export default class TimeInputSelector extends React.Component {
     incrementValue(){
         //reset if value not sharp
         if(this.isValueSharpAccordingToStep(this.value)){
-            const amount =  parseInt(value / this.step),
+            const amount =  parseInt(this.value / this.step),
                 sharpValue = amount * this.step
             this.value = sharpValue + this.step
         }else{
