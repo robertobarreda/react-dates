@@ -15,13 +15,31 @@ export default class TimeInputSelector extends React.Component {
     }
 
     incrementValue(){
-        this.value = this.value + this.step
+        //reset if value not sharp
+        if(this.isValueSharpAccordingToStep(this.value)){
+            const amount =  parseInt(value / this.step),
+                sharpValue = amount * this.step
+            this.value = sharpValue + this.step
+        }else{
+            this.value = this.value + this.step
+        }
         this.onValueChange(this.value)
     }
     decrementValue(){
-        this.value = this.value - this.step
+        //reset if value not sharp
+        if(this.isValueSharpAccordingToStep(this.value)){
+            const amount =  parseInt(this.value / this.step) + 1,
+                sharpValue = amount * this.step
+            this.value = sharpValue - this.step
+        }else{
+            this.value = this.value - this.step
+        }
         this.onValueChange(this.value)
     }
+    isValueSharpAccordingToStep(value){
+        return this.step != 1 && value % this.step != 0
+    }
+
     handleInputChange(event){
         const minNum = parseInt(this.props.min)
         const maxNum = parseInt(this.props.max)
