@@ -8,7 +8,7 @@ import Portal from 'react-portal';
 import OutsideClickHandler from './OutsideClickHandler';
 import getResponsiveContainerStyles from '../utils/getResponsiveContainerStyles';
 
-import isInclusivelyAfterDay from '../utils/isInclusivelyAfterDay';
+import isInclusivelyBeforeDay from '../utils/isInclusivelyBeforeDay';
 
 import DateRangePickerInputController from './DateRangePickerInputController';
 import DayPickerRangeController from './DayPickerRangeController';
@@ -36,7 +36,7 @@ const defaultProps = {
   minimumNights: 0,
   isDayBlocked: () => false,
   isDayHighlighted: () => false,
-  isOutsideRange: day => null,//!isInclusivelyAfterDay(day, moment()),
+  isOutsideRange: day => !isInclusivelyBeforeDay(day, moment()),
   enableOutsideDays: false,
   numberOfMonths: 2,
   showClearDates: false,
