@@ -145,6 +145,7 @@ export default class CalendarMonthGrid extends React.Component {
       onDayMouseLeave,
       onDayClick,
       onMonthTransitionEnd,
+        onDayDoubleClick
     } = this.props;
 
 
@@ -179,6 +180,7 @@ export default class CalendarMonthGrid extends React.Component {
               onDayMouseEnter={onDayMouseEnter}
               onDayMouseLeave={onDayMouseLeave}
               onDayClick={onDayClick}
+              onDayDoubleClick={onDayDoubleClick}
             />
           );
         })}

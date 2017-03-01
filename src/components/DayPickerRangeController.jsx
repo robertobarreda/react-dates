@@ -98,6 +98,7 @@ export default class DayPickerRangeController extends React.Component {
     this.today = moment();
 
     this.onDayClick = this.onDayClick.bind(this);
+    this.onDayDoubleClick = this.onDayDoubleClick.bind(this);
     this.onDayMouseEnter = this.onDayMouseEnter.bind(this);
     this.onDayMouseLeave = this.onDayMouseLeave.bind(this);
   }
@@ -137,6 +138,12 @@ export default class DayPickerRangeController extends React.Component {
       }
     }
 
+    this.props.onDatesChange({ startDate, endDate });
+  }
+
+  onDayDoubleClick(day, e){
+    let startDate  = day.startOf('day'),
+      endDate = moment(day).endOf('day');
     this.props.onDatesChange({ startDate, endDate });
   }
 
@@ -275,6 +282,7 @@ export default class DayPickerRangeController extends React.Component {
               modifiers={modifiers}
               numberOfMonths={numberOfMonths}
               onDayClick={this.onDayClick}
+              onDayDoubleClick={this.onDayDoubleClick}
               onDayMouseEnter={this.onDayMouseEnter}
               onDayMouseLeave={this.onDayMouseLeave}
               onPrevMonthClick={onPrevMonthClick}

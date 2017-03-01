@@ -81,6 +81,7 @@ export default class CalendarMonth extends React.Component {
       onDayClick,
       onDayMouseEnter,
       onDayMouseLeave,
+        onDayDoubleClick
     } = this.props;
 
     const { weeks } = this.state;
@@ -116,6 +117,7 @@ export default class CalendarMonth extends React.Component {
                           onDayMouseEnter={onDayMouseEnter}
                           onDayMouseLeave={onDayMouseLeave}
                           onDayClick={onDayClick}
+                          onDayDoubleClick={onDayDoubleClick}
                         />
                       }
                     </td>

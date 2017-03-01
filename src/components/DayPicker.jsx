@@ -374,6 +374,7 @@ export default class DayPicker extends React.Component {
       onDayMouseLeave,
       onOutsideClick,
       monthFormat,
+        onDayDoubleClick
     } = this.props;
 
     const numOfWeekHeaders = this.isVertical() ? 1 : numberOfMonths;
@@ -452,6 +453,7 @@ export default class DayPicker extends React.Component {
               withPortal={withPortal}
               numberOfMonths={numberOfMonths * scrollableMonthMultiple}
               onDayClick={onDayClick}
+              onDayDoubleClick={onDayDoubleClick}
               onDayMouseEnter={onDayMouseEnter}
               onDayMouseLeave={onDayMouseLeave}
               onMonthTransitionEnd={this.updateStateAfterMonthTransition}

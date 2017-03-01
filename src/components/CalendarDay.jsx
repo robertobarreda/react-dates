@@ -27,6 +27,11 @@ export default class CalendarDay extends React.Component {
     onDayClick(day, e);
   }
 
+  onDayDoubleClick(day, e){
+    const { onDayDoubleClick } = this.props;
+    onDayDoubleClick(day, e);
+  }
+
   onDayMouseEnter(day, e) {
     const { onDayMouseEnter } = this.props;
     onDayMouseEnter(day, e);
@@ -46,6 +51,7 @@ export default class CalendarDay extends React.Component {
         onMouseEnter={e => this.onDayMouseEnter(day, e)}
         onMouseLeave={e => this.onDayMouseLeave(day, e)}
         onClick={e => this.onDayClick(day, e)}
+        onDoubleClick={e => this.onDayDoubleClick(day, e)}
       >
         <span className="CalendarDay__day">{day.format('D')}</span>
       </div>
