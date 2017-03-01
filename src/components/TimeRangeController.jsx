@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import TimePicker from './TimePicker';
+import moment from 'moment';
 
 export default class TimeRangeController extends React.Component {
 
@@ -12,7 +13,10 @@ export default class TimeRangeController extends React.Component {
 
     onStartTimeChange(time){
         let  { endDate }  = this.props;
-        this.props.onDatesChange({startDate: time, endDate});
+        if(endDate.isSameOrBefore(time)){
+            endDate = moment(time).add(this.props.step, 'm')
+        }
+        this.props.onDatesChange({startDate: time, endDate})
     }
 
     onEndTimeChange(time){
