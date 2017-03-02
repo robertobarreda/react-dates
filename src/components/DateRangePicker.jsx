@@ -47,7 +47,7 @@ const defaultProps = {
   required: false,
   reopenPickerOnClearDates: false,
   keepOpenOnDateSelect: false,
-  initialVisibleMonth: () => moment(),
+  initialVisibleMonth: () => moment().subtract(1, 'month'),
   navPrev: null,
   navNext: null,
 
