@@ -104,7 +104,7 @@ export default class TimeInputSelector extends React.Component {
                         disabled={this.incrementBtnDisabled}
                         onClick={this.incrementValue}>
                     <FontIcon iconClassName="mdi mdi-chevron-up"
-                              className="btn-icon btn-icon--move-up"/>plus
+                              className="btn-icon btn-icon--move-up"/>
                 </button>
                 <input type="text"
                        className="time-selector__input"
@@ -116,7 +116,7 @@ export default class TimeInputSelector extends React.Component {
                         disabled={this.decrementBtnDisabled}
                         onClick={this.decrementValue}>
                     <FontIcon iconClassName="mdi mdi-chevron-down"
-                              className="btn-icon btn-icon--move-down"/>minus
+                              className="btn-icon btn-icon--move-down"/>
                 </button>
             </div>
         );
