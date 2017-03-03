@@ -658,15 +658,18 @@
 .DateInput {
   text-align: center; }
 
+.time-selector__btn[disabled] .btn-icon {
+  color: #80e8e0; }
+
 .time-not-valid .time-picker__label, .time-not-valid .time-picker--align-middle, .time-not-valid .time-selector__input,
 .time-not-valid .time-selector__btn .btn-icon {
   color: tomato; }
+
+.time-not-valid .time-selector__btn[disabled] .btn-icon {
+  color: #ffb9ad; }
 
 .time-not-valid .time-selector__input {
   border-color: tomato; }
 
 .time-not-valid .time-selector__input:focus {
   outline: tomato auto 3px; }
-
-.time-selector__btn[disabled] .btn-icon {
-  color: #80e8e0; }
