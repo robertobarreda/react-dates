@@ -24,20 +24,23 @@ class DateRangePickerWrapper extends React.Component {
   onDatesChange({ startDate, endDate }) {
     this.setState({ startDate, endDate });
     //validation
+      console.log('startDate.isSameOrAfter(endDate)', startDate.isSameOrAfter(endDate))
+      console.log('startDate', startDate)
+      console.log('endDate', endDate)
     this.setState({timeNotValid: startDate.isSameOrAfter(endDate)});
   }
 
 
   /*TODO create separate component for predefined filters*/
   selectLastHour(){
-    let end = moment(),
-        start = moment().add(-1, 'h');
+    let end = moment().seconds(0).millisecond(0),
+        start = moment().add(-1, 'h').seconds(0).millisecond(0);
     this.onDatesChange({startDate: start, endDate: end});
   }
 
   selectLastWeek(){
-    let end = moment(),
-        start = moment().add(-1, 'w');
+    let end = moment().seconds(0).millisecond(0),
+        start = moment().add(-1, 'w').seconds(0).millisecond(0);
     this.onDatesChange({startDate: start, endDate: end});
   }
 

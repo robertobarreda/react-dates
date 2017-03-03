@@ -83,10 +83,17 @@
   text-align: center;
 }
 
+.time-selector__btn[disabled] .btn-icon{
+  color: $react-dates-color-primary-shade-3
+}
+
 .time-not-valid {
   .time-picker__label, .time-picker--align-middle, .time-selector__input,
   .time-selector__btn .btn-icon{
     color: $react-dates-validation-color;
+  }
+  .time-selector__btn[disabled] .btn-icon{
+    color: lighten($react-dates-validation-color, 20%)
   }
   .time-selector__input{
     border-color: $react-dates-validation-color;
@@ -94,9 +101,6 @@
   .time-selector__input:focus{
     outline: $react-dates-validation-color auto 3px;
   }
-}
-.time-selector__btn[disabled] .btn-icon{
-  color: $react-dates-color-primary-shade-3
 }
 
 
