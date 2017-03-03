@@ -95,3 +95,8 @@
     outline: $react-dates-validation-color auto 3px;
   }
 }
+.time-selector__btn[disabled] .btn-icon{
+  color: $react-dates-color-primary-shade-3
+}
+
+
