@@ -1,0 +1,33 @@
+@import '../node_modules/react-md/src/scss/_colors.scss';
+
+@function get-md-color($color-name, $swatch, $accent: false){
+  $name: 'md-#{$color-name}-#{if($accent, 'a-', '')}#{$swatch}';
+  @return map-get($md-color-map, $name);
+}
+@function get-class-name($color-name){
+  @return 'color-theme-md-#{$color-name}'
+}
+
+@mixin theme($color-name) {
+  $class-name: get-class-name($color-name);
+  .#{$class-name} {
+    $react-dates-color-primary: get-md-color($color-name, '800', false);
+    $react-dates-color-primary-dark: get-md-color($color-name, '700', false);
+    $react-dates-color-primary-shade-1: get-md-color($color-name, '300', false);
+    $react-dates-color-primary-shade-2: get-md-color($color-name, '400', false);
+    $react-dates-color-primary-shade-3: get-md-color($color-name, '200', false);
+    $react-dates-color-primary-shade-4: get-md-color($color-name, '100', false);
+    $react-dates-color-secondary: get-md-color($color-name, '600', false);
+    $react-dates-color-text-focus: get-md-color($color-name, '700', false);
+    $react-dates-color-focus: get-md-color($color-name, '100', true);
+
+    @import 'Colors';
+  }
+}
+
+$md-colors-names: red pink purple deep-purple indigo light-blue cyan
+teal green light-green lime yellow amber orange deep-orange brown grey blue-grey;
+
+@each $color-name in $md-colors-names{
+  @include theme($color-name)
+}

@@ -1,0 +1,61 @@
+@import "variables";
+
+/** from CalendarMonth.scss **/
+.CalendarMonth__day--highlighted-calendar {
+  &:active {
+    background: $react-dates-color-secondary;
+  }
+}
+.CalendarMonth__day--selected-span {
+  background: $react-dates-color-primary-shade-2;
+  border: 1px double $react-dates-color-primary-shade-1;
+  color: $react-dates-color-white;
+
+  &.CalendarMonth__day--hovered,
+  &:active {
+    background: $react-dates-color-primary-shade-1;
+    border: 1px double $react-dates-color-primary;
+  }
+
+  &.CalendarMonth__day--last-in-range {
+    border-right: $react-dates-color-primary;
+  }
+}
+
+.CalendarMonth__day--hovered-span,
+.CalendarMonth__day--after-hovered-start {
+  background: $react-dates-color-primary-shade-4;
+  border: 1px double $react-dates-color-primary-shade-3;
+  color: $react-dates-color-secondary;
+}
+
+.CalendarMonth__day--selected-start,
+.CalendarMonth__day--selected-end,
+.CalendarMonth__day--selected {
+  background: $react-dates-color-primary;
+  border: 1px double $react-dates-color-primary;
+  color: $react-dates-color-white;
+
+  &:active {
+    background: $react-dates-color-primary;
+  }
+}
+
+/** form DateInput.scss **/
+.DateInput__display-text--focused {
+  border: solid transparent;
+  border-bottom: solid $react-dates-color-focus;
+  border-radius: 3px;
+}
+
+/** from TimePicker.scss **/
+.time-selector{
+  &__btn {
+    .btn-icon {
+      color: $react-dates-color-primary;
+    }
+  }
+}
+.time-selector__btn[disabled] .btn-icon{
+  color: $react-dates-color-primary-shade-3
+}

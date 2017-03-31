@@ -4,11 +4,11 @@ $caret-top: $react-dates-spacing-vertical-picker - $react-dates-width-tooltip-ar
 .DateInput {
   // font
   font-weight: 200;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 16px;
   color: $react-dates-color-placeholder-text;
   margin: 0;
-  padding: 8px;
+  padding: 4px;
 
   background: $react-dates-color-white;
   position: relative;
@@ -63,14 +63,7 @@ $caret-top: $react-dates-spacing-vertical-picker - $react-dates-width-tooltip-ar
   color: $react-dates-color-text;
 }
 
-.DateInput__display-text--focused {
-  /*background: $react-dates-color-focus;
-  border-color: $react-dates-color-focus;*/
-  border: solid transparent;
-  border-bottom: solid $react-dates-color-focus;
-  border-radius: 3px;
-  /*color: $react-dates-color-text-focus;*/
-}
+/* colors extracted */
 
 .DateInput__display-text--disabled {
   font-style: italic;

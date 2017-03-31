@@ -24,6 +24,9 @@ To run that demo on your own computer:
 * `npm run storybook`
 * Visit http://localhost:9001/
 
+default color schema for date-time-picker is md-blue in order to get different color theme proper css class 
+should be assign to parent html element eg. .color-theme-md-red or .color-theme-md-cyan
+
 ## Getting Started
 #### Install dependencies
 Ensure packages are installed with correct version numbers by running:

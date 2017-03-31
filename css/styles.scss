@@ -1,3 +1,5 @@
+
+
 @import 'CalendarDay';
 @import 'CalendarMonth';
 @import 'CalendarMonthGrid';
@@ -9,3 +11,7 @@
 @import 'SingleDatePicker';
 @import 'SingleDatePickerInput';
 @import 'TimePicker';
+//default color is md-blue (in case if there is no class color specified or class is not valid)
+@import 'Colors';
+@import 'themes';
+

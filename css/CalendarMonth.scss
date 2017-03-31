@@ -65,9 +65,7 @@
   color: $react-dates-color-gray;
   cursor: default;
 
-  &:active {
-    background: $react-dates-color-secondary;
-  }
+  /* color extracted */
 }
 
 .CalendarMonth__day--outside {
@@ -96,40 +94,7 @@
   }
 }
 
-.CalendarMonth__day--selected-span {
-  background: $react-dates-color-primary-shade-2;
-  border: 1px double $react-dates-color-primary-shade-1;
-  color: $react-dates-color-white;
-
-  &.CalendarMonth__day--hovered,
-  &:active {
-    background: $react-dates-color-primary-shade-1;
-    border: 1px double $react-dates-color-primary;
-  }
-
-  &.CalendarMonth__day--last-in-range {
-    border-right: $react-dates-color-primary;
-  }
-}
-
-.CalendarMonth__day--hovered-span,
-.CalendarMonth__day--after-hovered-start {
-  background: $react-dates-color-primary-shade-4;
-  border: 1px double $react-dates-color-primary-shade-3;
-  color: $react-dates-color-secondary;
-}
-
-.CalendarMonth__day--selected-start,
-.CalendarMonth__day--selected-end,
-.CalendarMonth__day--selected {
-  background: $react-dates-color-primary;
-  border: 1px double $react-dates-color-primary;
-  color: $react-dates-color-white;
-
-  &:active {
-    background: $react-dates-color-primary;
-  }
-}
+/* colors extracted */
 
 .CalendarMonth__day--blocked-calendar {
   background: $react-dates-color-gray-lighter;
