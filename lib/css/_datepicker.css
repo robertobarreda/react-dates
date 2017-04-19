@@ -62,9 +62,8 @@
 .CalendarMonth__day--highlighted-calendar {
   background: #ffe8bc;
   color: #565a5c;
-  cursor: default; }
-  .CalendarMonth__day--highlighted-calendar:active {
-    background: #007a87; }
+  cursor: default;
+  /* color extracted */ }
 
 .CalendarMonth__day--outside {
   border: 0;
@@ -85,33 +84,7 @@
   .CalendarMonth__day--blocked-minimum-nights:active {
     background: #fff; }
 
-.CalendarMonth__day--selected-span {
-  background: #66e2da;
-  border: 1px double #33dacd;
-  color: #fff; }
-  .CalendarMonth__day--selected-span.CalendarMonth__day--hovered, .CalendarMonth__day--selected-span:active {
-    background: #33dacd;
-    border: 1px double #00a699; }
-  .CalendarMonth__day--selected-span.CalendarMonth__day--last-in-range {
-    border-right: #00a699; }
-
-.CalendarMonth__day--hovered-span,
-.CalendarMonth__day--after-hovered-start {
-  background: #b2f1ec;
-  border: 1px double #80e8e0;
-  color: #007a87; }
-
-.CalendarMonth__day--selected-start,
-.CalendarMonth__day--selected-end,
-.CalendarMonth__day--selected {
-  background: #00a699;
-  border: 1px double #00a699;
-  color: #fff; }
-  .CalendarMonth__day--selected-start:active,
-  .CalendarMonth__day--selected-end:active,
-  .CalendarMonth__day--selected:active {
-    background: #00a699; }
-
+/* colors extracted */
 .CalendarMonth__day--blocked-calendar {
   background: #cacccd;
   color: #82888a;
@@ -309,11 +282,11 @@
 
 .DateInput {
   font-weight: 200;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 16px;
   color: #757575;
   margin: 0;
-  padding: 8px;
+  padding: 4px;
   background: #fff;
   position: relative;
   display: inline-block;
@@ -359,14 +332,7 @@
 .DateInput__display-text--has-input {
   color: #484848; }
 
-.DateInput__display-text--focused {
-  /*background: $react-dates-color-focus;
-  border-color: $react-dates-color-focus;*/
-  border: solid transparent;
-  border-bottom: solid #99ede6;
-  border-radius: 3px;
-  /*color: $react-dates-color-text-focus;*/ }
-
+/* colors extracted */
 .DateInput__display-text--disabled {
   font-style: italic; }
 
@@ -618,7 +584,7 @@
     width: 100%; }
     .time-selector__btn .btn-icon {
       font-size: 20px;
-      color: #00a699;
+      /* color extracted */
       font-weight: bold; }
     .time-selector__btn--move-up {
       padding-bottom: 4px; }
@@ -658,9 +624,7 @@
 .DateInput {
   text-align: center; }
 
-.time-selector__btn[disabled] .btn-icon {
-  color: #80e8e0; }
-
+/* color extracted */
 .time-not-valid .time-picker__label, .time-not-valid .time-picker--align-middle, .time-not-valid .time-selector__input,
 .time-not-valid .time-selector__btn .btn-icon {
   color: tomato; }
@@ -673,3 +637,749 @@
 
 .time-not-valid .time-selector__input:focus {
   outline: tomato auto 3px; }
+
+/** from CalendarMonth.scss **/
+.CalendarMonth__day--highlighted-calendar:active {
+  background: #1e88e5; }
+
+.CalendarMonth__day--selected-span {
+  background: #42a5f5;
+  border: 1px double #64b5f6;
+  color: #fff; }
+  .CalendarMonth__day--selected-span.CalendarMonth__day--hovered, .CalendarMonth__day--selected-span:active {
+    background: #64b5f6;
+    border: 1px double #1565c0; }
+  .CalendarMonth__day--selected-span.CalendarMonth__day--last-in-range {
+    border-right: #1565c0; }
+
+.CalendarMonth__day--hovered-span,
+.CalendarMonth__day--after-hovered-start {
+  background: #bbdefb;
+  border: 1px double #90caf9;
+  color: #1e88e5; }
+
+.CalendarMonth__day--selected-start,
+.CalendarMonth__day--selected-end,
+.CalendarMonth__day--selected {
+  background: #1565c0;
+  border: 1px double #1565c0;
+  color: #fff; }
+  .CalendarMonth__day--selected-start:active,
+  .CalendarMonth__day--selected-end:active,
+  .CalendarMonth__day--selected:active {
+    background: #1565c0; }
+
+/** form DateInput.scss **/
+.DateInput__display-text--focused {
+  border: solid transparent;
+  border-bottom: solid #82b1ff;
+  border-radius: 3px; }
+
+/** from TimePicker.scss **/
+.time-selector__btn .btn-icon {
+  color: #1565c0; }
+
+.time-selector__btn[disabled] .btn-icon {
+  color: #90caf9; }
+
+.color-theme-md-red {
+  /** from CalendarMonth.scss **/
+  /** form DateInput.scss **/
+  /** from TimePicker.scss **/ }
+  .color-theme-md-red .CalendarMonth__day--highlighted-calendar:active {
+    background: #e53935; }
+  .color-theme-md-red .CalendarMonth__day--selected-span {
+    background: #ef5350;
+    border: 1px double #e57373;
+    color: #fff; }
+    .color-theme-md-red .CalendarMonth__day--selected-span.CalendarMonth__day--hovered, .color-theme-md-red .CalendarMonth__day--selected-span:active {
+      background: #e57373;
+      border: 1px double #c62828; }
+    .color-theme-md-red .CalendarMonth__day--selected-span.CalendarMonth__day--last-in-range {
+      border-right: #c62828; }
+  .color-theme-md-red .CalendarMonth__day--hovered-span,
+  .color-theme-md-red .CalendarMonth__day--after-hovered-start {
+    background: #ffcdd2;
+    border: 1px double #ef9a9a;
+    color: #e53935; }
+  .color-theme-md-red .CalendarMonth__day--selected-start,
+  .color-theme-md-red .CalendarMonth__day--selected-end,
+  .color-theme-md-red .CalendarMonth__day--selected {
+    background: #c62828;
+    border: 1px double #c62828;
+    color: #fff; }
+    .color-theme-md-red .CalendarMonth__day--selected-start:active,
+    .color-theme-md-red .CalendarMonth__day--selected-end:active,
+    .color-theme-md-red .CalendarMonth__day--selected:active {
+      background: #c62828; }
+  .color-theme-md-red .DateInput__display-text--focused {
+    border: solid transparent;
+    border-bottom: solid #ff8a80;
+    border-radius: 3px; }
+  .color-theme-md-red .time-selector__btn .btn-icon {
+    color: #c62828; }
+  .color-theme-md-red .time-selector__btn[disabled] .btn-icon {
+    color: #ef9a9a; }
+
+.color-theme-md-pink {
+  /** from CalendarMonth.scss **/
+  /** form DateInput.scss **/
+  /** from TimePicker.scss **/ }
+  .color-theme-md-pink .CalendarMonth__day--highlighted-calendar:active {
+    background: #d81b60; }
+  .color-theme-md-pink .CalendarMonth__day--selected-span {
+    background: #ec407a;
+    border: 1px double #f06292;
+    color: #fff; }
+    .color-theme-md-pink .CalendarMonth__day--selected-span.CalendarMonth__day--hovered, .color-theme-md-pink .CalendarMonth__day--selected-span:active {
+      background: #f06292;
+      border: 1px double #ad1457; }
+    .color-theme-md-pink .CalendarMonth__day--selected-span.CalendarMonth__day--last-in-range {
+      border-right: #ad1457; }
+  .color-theme-md-pink .CalendarMonth__day--hovered-span,
+  .color-theme-md-pink .CalendarMonth__day--after-hovered-start {
+    background: #f8bbd0;
+    border: 1px double #f48fb1;
+    color: #d81b60; }
+  .color-theme-md-pink .CalendarMonth__day--selected-start,
+  .color-theme-md-pink .CalendarMonth__day--selected-end,
+  .color-theme-md-pink .CalendarMonth__day--selected {
+    background: #ad1457;
+    border: 1px double #ad1457;
+    color: #fff; }
+    .color-theme-md-pink .CalendarMonth__day--selected-start:active,
+    .color-theme-md-pink .CalendarMonth__day--selected-end:active,
+    .color-theme-md-pink .CalendarMonth__day--selected:active {
+      background: #ad1457; }
+  .color-theme-md-pink .DateInput__display-text--focused {
+    border: solid transparent;
+    border-bottom: solid #ff80ab;
+    border-radius: 3px; }
+  .color-theme-md-pink .time-selector__btn .btn-icon {
+    color: #ad1457; }
+  .color-theme-md-pink .time-selector__btn[disabled] .btn-icon {
+    color: #f48fb1; }
+
+.color-theme-md-purple {
+  /** from CalendarMonth.scss **/
+  /** form DateInput.scss **/
+  /** from TimePicker.scss **/ }
+  .color-theme-md-purple .CalendarMonth__day--highlighted-calendar:active {
+    background: #8e24aa; }
+  .color-theme-md-purple .CalendarMonth__day--selected-span {
+    background: #ab47bc;
+    border: 1px double #ba68c8;
+    color: #fff; }
+    .color-theme-md-purple .CalendarMonth__day--selected-span.CalendarMonth__day--hovered, .color-theme-md-purple .CalendarMonth__day--selected-span:active {
+      background: #ba68c8;
+      border: 1px double #6a1b9a; }
+    .color-theme-md-purple .CalendarMonth__day--selected-span.CalendarMonth__day--last-in-range {
+      border-right: #6a1b9a; }
+  .color-theme-md-purple .CalendarMonth__day--hovered-span,
+  .color-theme-md-purple .CalendarMonth__day--after-hovered-start {
+    background: #e1bee7;
+    border: 1px double #ce93d8;
+    color: #8e24aa; }
+  .color-theme-md-purple .CalendarMonth__day--selected-start,
+  .color-theme-md-purple .CalendarMonth__day--selected-end,
+  .color-theme-md-purple .CalendarMonth__day--selected {
+    background: #6a1b9a;
+    border: 1px double #6a1b9a;
+    color: #fff; }
+    .color-theme-md-purple .CalendarMonth__day--selected-start:active,
+    .color-theme-md-purple .CalendarMonth__day--selected-end:active,
+    .color-theme-md-purple .CalendarMonth__day--selected:active {
+      background: #6a1b9a; }
+  .color-theme-md-purple .DateInput__display-text--focused {
+    border: solid transparent;
+    border-bottom: solid #ea80fc;
+    border-radius: 3px; }
+  .color-theme-md-purple .time-selector__btn .btn-icon {
+    color: #6a1b9a; }
+  .color-theme-md-purple .time-selector__btn[disabled] .btn-icon {
+    color: #ce93d8; }
+
+.color-theme-md-deep-purple {
+  /** from CalendarMonth.scss **/
+  /** form DateInput.scss **/
+  /** from TimePicker.scss **/ }
+  .color-theme-md-deep-purple .CalendarMonth__day--highlighted-calendar:active {
+    background: #5e35b1; }
+  .color-theme-md-deep-purple .CalendarMonth__day--selected-span {
+    background: #7e57c2;
+    border: 1px double #9575cd;
+    color: #fff; }
+    .color-theme-md-deep-purple .CalendarMonth__day--selected-span.CalendarMonth__day--hovered, .color-theme-md-deep-purple .CalendarMonth__day--selected-span:active {
+      background: #9575cd;
+      border: 1px double #4527a0; }
+    .color-theme-md-deep-purple .CalendarMonth__day--selected-span.CalendarMonth__day--last-in-range {
+      border-right: #4527a0; }
+  .color-theme-md-deep-purple .CalendarMonth__day--hovered-span,
+  .color-theme-md-deep-purple .CalendarMonth__day--after-hovered-start {
+    background: #d1c4e9;
+    border: 1px double #b39ddb;
+    color: #5e35b1; }
+  .color-theme-md-deep-purple .CalendarMonth__day--selected-start,
+  .color-theme-md-deep-purple .CalendarMonth__day--selected-end,
+  .color-theme-md-deep-purple .CalendarMonth__day--selected {
+    background: #4527a0;
+    border: 1px double #4527a0;
+    color: #fff; }
+    .color-theme-md-deep-purple .CalendarMonth__day--selected-start:active,
+    .color-theme-md-deep-purple .CalendarMonth__day--selected-end:active,
+    .color-theme-md-deep-purple .CalendarMonth__day--selected:active {
+      background: #4527a0; }
+  .color-theme-md-deep-purple .DateInput__display-text--focused {
+    border: solid transparent;
+    border-bottom: solid #b388ff;
+    border-radius: 3px; }
+  .color-theme-md-deep-purple .time-selector__btn .btn-icon {
+    color: #4527a0; }
+  .color-theme-md-deep-purple .time-selector__btn[disabled] .btn-icon {
+    color: #b39ddb; }
+
+.color-theme-md-indigo {
+  /** from CalendarMonth.scss **/
+  /** form DateInput.scss **/
+  /** from TimePicker.scss **/ }
+  .color-theme-md-indigo .CalendarMonth__day--highlighted-calendar:active {
+    background: #3949ab; }
+  .color-theme-md-indigo .CalendarMonth__day--selected-span {
+    background: #5c6bc0;
+    border: 1px double #7986cb;
+    color: #fff; }
+    .color-theme-md-indigo .CalendarMonth__day--selected-span.CalendarMonth__day--hovered, .color-theme-md-indigo .CalendarMonth__day--selected-span:active {
+      background: #7986cb;
+      border: 1px double #283593; }
+    .color-theme-md-indigo .CalendarMonth__day--selected-span.CalendarMonth__day--last-in-range {
+      border-right: #283593; }
+  .color-theme-md-indigo .CalendarMonth__day--hovered-span,
+  .color-theme-md-indigo .CalendarMonth__day--after-hovered-start {
+    background: #c5cae9;
+    border: 1px double #9fa8da;
+    color: #3949ab; }
+  .color-theme-md-indigo .CalendarMonth__day--selected-start,
+  .color-theme-md-indigo .CalendarMonth__day--selected-end,
+  .color-theme-md-indigo .CalendarMonth__day--selected {
+    background: #283593;
+    border: 1px double #283593;
+    color: #fff; }
+    .color-theme-md-indigo .CalendarMonth__day--selected-start:active,
+    .color-theme-md-indigo .CalendarMonth__day--selected-end:active,
+    .color-theme-md-indigo .CalendarMonth__day--selected:active {
+      background: #283593; }
+  .color-theme-md-indigo .DateInput__display-text--focused {
+    border: solid transparent;
+    border-bottom: solid #8c9eff;
+    border-radius: 3px; }
+  .color-theme-md-indigo .time-selector__btn .btn-icon {
+    color: #283593; }
+  .color-theme-md-indigo .time-selector__btn[disabled] .btn-icon {
+    color: #9fa8da; }
+
+.color-theme-md-light-blue {
+  /** from CalendarMonth.scss **/
+  /** form DateInput.scss **/
+  /** from TimePicker.scss **/ }
+  .color-theme-md-light-blue .CalendarMonth__day--highlighted-calendar:active {
+    background: #039be5; }
+  .color-theme-md-light-blue .CalendarMonth__day--selected-span {
+    background: #29b6f6;
+    border: 1px double #4fc3f7;
+    color: #fff; }
+    .color-theme-md-light-blue .CalendarMonth__day--selected-span.CalendarMonth__day--hovered, .color-theme-md-light-blue .CalendarMonth__day--selected-span:active {
+      background: #4fc3f7;
+      border: 1px double #0277bd; }
+    .color-theme-md-light-blue .CalendarMonth__day--selected-span.CalendarMonth__day--last-in-range {
+      border-right: #0277bd; }
+  .color-theme-md-light-blue .CalendarMonth__day--hovered-span,
+  .color-theme-md-light-blue .CalendarMonth__day--after-hovered-start {
+    background: #b3e5fc;
+    border: 1px double #81d4fa;
+    color: #039be5; }
+  .color-theme-md-light-blue .CalendarMonth__day--selected-start,
+  .color-theme-md-light-blue .CalendarMonth__day--selected-end,
+  .color-theme-md-light-blue .CalendarMonth__day--selected {
+    background: #0277bd;
+    border: 1px double #0277bd;
+    color: #fff; }
+    .color-theme-md-light-blue .CalendarMonth__day--selected-start:active,
+    .color-theme-md-light-blue .CalendarMonth__day--selected-end:active,
+    .color-theme-md-light-blue .CalendarMonth__day--selected:active {
+      background: #0277bd; }
+  .color-theme-md-light-blue .DateInput__display-text--focused {
+    border: solid transparent;
+    border-bottom: solid #80d8ff;
+    border-radius: 3px; }
+  .color-theme-md-light-blue .time-selector__btn .btn-icon {
+    color: #0277bd; }
+  .color-theme-md-light-blue .time-selector__btn[disabled] .btn-icon {
+    color: #81d4fa; }
+
+.color-theme-md-cyan {
+  /** from CalendarMonth.scss **/
+  /** form DateInput.scss **/
+  /** from TimePicker.scss **/ }
+  .color-theme-md-cyan .CalendarMonth__day--highlighted-calendar:active {
+    background: #00acc1; }
+  .color-theme-md-cyan .CalendarMonth__day--selected-span {
+    background: #26c6da;
+    border: 1px double #4dd0e1;
+    color: #fff; }
+    .color-theme-md-cyan .CalendarMonth__day--selected-span.CalendarMonth__day--hovered, .color-theme-md-cyan .CalendarMonth__day--selected-span:active {
+      background: #4dd0e1;
+      border: 1px double #00838f; }
+    .color-theme-md-cyan .CalendarMonth__day--selected-span.CalendarMonth__day--last-in-range {
+      border-right: #00838f; }
+  .color-theme-md-cyan .CalendarMonth__day--hovered-span,
+  .color-theme-md-cyan .CalendarMonth__day--after-hovered-start {
+    background: #b2ebf2;
+    border: 1px double #80deea;
+    color: #00acc1; }
+  .color-theme-md-cyan .CalendarMonth__day--selected-start,
+  .color-theme-md-cyan .CalendarMonth__day--selected-end,
+  .color-theme-md-cyan .CalendarMonth__day--selected {
+    background: #00838f;
+    border: 1px double #00838f;
+    color: #fff; }
+    .color-theme-md-cyan .CalendarMonth__day--selected-start:active,
+    .color-theme-md-cyan .CalendarMonth__day--selected-end:active,
+    .color-theme-md-cyan .CalendarMonth__day--selected:active {
+      background: #00838f; }
+  .color-theme-md-cyan .DateInput__display-text--focused {
+    border: solid transparent;
+    border-bottom: solid #84ffff;
+    border-radius: 3px; }
+  .color-theme-md-cyan .time-selector__btn .btn-icon {
+    color: #00838f; }
+  .color-theme-md-cyan .time-selector__btn[disabled] .btn-icon {
+    color: #80deea; }
+
+.color-theme-md-teal {
+  /** from CalendarMonth.scss **/
+  /** form DateInput.scss **/
+  /** from TimePicker.scss **/ }
+  .color-theme-md-teal .CalendarMonth__day--highlighted-calendar:active {
+    background: #00897b; }
+  .color-theme-md-teal .CalendarMonth__day--selected-span {
+    background: #26a69a;
+    border: 1px double #4db6ac;
+    color: #fff; }
+    .color-theme-md-teal .CalendarMonth__day--selected-span.CalendarMonth__day--hovered, .color-theme-md-teal .CalendarMonth__day--selected-span:active {
+      background: #4db6ac;
+      border: 1px double #00695c; }
+    .color-theme-md-teal .CalendarMonth__day--selected-span.CalendarMonth__day--last-in-range {
+      border-right: #00695c; }
+  .color-theme-md-teal .CalendarMonth__day--hovered-span,
+  .color-theme-md-teal .CalendarMonth__day--after-hovered-start {
+    background: #b2dfdb;
+    border: 1px double #80cbc4;
+    color: #00897b; }
+  .color-theme-md-teal .CalendarMonth__day--selected-start,
+  .color-theme-md-teal .CalendarMonth__day--selected-end,
+  .color-theme-md-teal .CalendarMonth__day--selected {
+    background: #00695c;
+    border: 1px double #00695c;
+    color: #fff; }
+    .color-theme-md-teal .CalendarMonth__day--selected-start:active,
+    .color-theme-md-teal .CalendarMonth__day--selected-end:active,
+    .color-theme-md-teal .CalendarMonth__day--selected:active {
+      background: #00695c; }
+  .color-theme-md-teal .DateInput__display-text--focused {
+    border: solid transparent;
+    border-bottom: solid #a7ffeb;
+    border-radius: 3px; }
+  .color-theme-md-teal .time-selector__btn .btn-icon {
+    color: #00695c; }
+  .color-theme-md-teal .time-selector__btn[disabled] .btn-icon {
+    color: #80cbc4; }
+
+.color-theme-md-green {
+  /** from CalendarMonth.scss **/
+  /** form DateInput.scss **/
+  /** from TimePicker.scss **/ }
+  .color-theme-md-green .CalendarMonth__day--highlighted-calendar:active {
+    background: #43a047; }
+  .color-theme-md-green .CalendarMonth__day--selected-span {
+    background: #66bb6a;
+    border: 1px double #81c784;
+    color: #fff; }
+    .color-theme-md-green .CalendarMonth__day--selected-span.CalendarMonth__day--hovered, .color-theme-md-green .CalendarMonth__day--selected-span:active {
+      background: #81c784;
+      border: 1px double #2e7d32; }
+    .color-theme-md-green .CalendarMonth__day--selected-span.CalendarMonth__day--last-in-range {
+      border-right: #2e7d32; }
+  .color-theme-md-green .CalendarMonth__day--hovered-span,
+  .color-theme-md-green .CalendarMonth__day--after-hovered-start {
+    background: #c8e6c9;
+    border: 1px double #a5d6a7;
+    color: #43a047; }
+  .color-theme-md-green .CalendarMonth__day--selected-start,
+  .color-theme-md-green .CalendarMonth__day--selected-end,
+  .color-theme-md-green .CalendarMonth__day--selected {
+    background: #2e7d32;
+    border: 1px double #2e7d32;
+    color: #fff; }
+    .color-theme-md-green .CalendarMonth__day--selected-start:active,
+    .color-theme-md-green .CalendarMonth__day--selected-end:active,
+    .color-theme-md-green .CalendarMonth__day--selected:active {
+      background: #2e7d32; }
+  .color-theme-md-green .DateInput__display-text--focused {
+    border: solid transparent;
+    border-bottom: solid #b9f6ca;
+    border-radius: 3px; }
+  .color-theme-md-green .time-selector__btn .btn-icon {
+    color: #2e7d32; }
+  .color-theme-md-green .time-selector__btn[disabled] .btn-icon {
+    color: #a5d6a7; }
+
+.color-theme-md-light-green {
+  /** from CalendarMonth.scss **/
+  /** form DateInput.scss **/
+  /** from TimePicker.scss **/ }
+  .color-theme-md-light-green .CalendarMonth__day--highlighted-calendar:active {
+    background: #7cb342; }
+  .color-theme-md-light-green .CalendarMonth__day--selected-span {
+    background: #9ccc65;
+    border: 1px double #aed581;
+    color: #fff; }
+    .color-theme-md-light-green .CalendarMonth__day--selected-span.CalendarMonth__day--hovered, .color-theme-md-light-green .CalendarMonth__day--selected-span:active {
+      background: #aed581;
+      border: 1px double #558b2f; }
+    .color-theme-md-light-green .CalendarMonth__day--selected-span.CalendarMonth__day--last-in-range {
+      border-right: #558b2f; }
+  .color-theme-md-light-green .CalendarMonth__day--hovered-span,
+  .color-theme-md-light-green .CalendarMonth__day--after-hovered-start {
+    background: #dcedc8;
+    border: 1px double #c5e1a5;
+    color: #7cb342; }
+  .color-theme-md-light-green .CalendarMonth__day--selected-start,
+  .color-theme-md-light-green .CalendarMonth__day--selected-end,
+  .color-theme-md-light-green .CalendarMonth__day--selected {
+    background: #558b2f;
+    border: 1px double #558b2f;
+    color: #fff; }
+    .color-theme-md-light-green .CalendarMonth__day--selected-start:active,
+    .color-theme-md-light-green .CalendarMonth__day--selected-end:active,
+    .color-theme-md-light-green .CalendarMonth__day--selected:active {
+      background: #558b2f; }
+  .color-theme-md-light-green .DateInput__display-text--focused {
+    border: solid transparent;
+    border-bottom: solid #ccff90;
+    border-radius: 3px; }
+  .color-theme-md-light-green .time-selector__btn .btn-icon {
+    color: #558b2f; }
+  .color-theme-md-light-green .time-selector__btn[disabled] .btn-icon {
+    color: #c5e1a5; }
+
+.color-theme-md-lime {
+  /** from CalendarMonth.scss **/
+  /** form DateInput.scss **/
+  /** from TimePicker.scss **/ }
+  .color-theme-md-lime .CalendarMonth__day--highlighted-calendar:active {
+    background: #c0ca33; }
+  .color-theme-md-lime .CalendarMonth__day--selected-span {
+    background: #d4e157;
+    border: 1px double #dce775;
+    color: #fff; }
+    .color-theme-md-lime .CalendarMonth__day--selected-span.CalendarMonth__day--hovered, .color-theme-md-lime .CalendarMonth__day--selected-span:active {
+      background: #dce775;
+      border: 1px double #9e9d24; }
+    .color-theme-md-lime .CalendarMonth__day--selected-span.CalendarMonth__day--last-in-range {
+      border-right: #9e9d24; }
+  .color-theme-md-lime .CalendarMonth__day--hovered-span,
+  .color-theme-md-lime .CalendarMonth__day--after-hovered-start {
+    background: #f0f4c3;
+    border: 1px double #e6ee9c;
+    color: #c0ca33; }
+  .color-theme-md-lime .CalendarMonth__day--selected-start,
+  .color-theme-md-lime .CalendarMonth__day--selected-end,
+  .color-theme-md-lime .CalendarMonth__day--selected {
+    background: #9e9d24;
+    border: 1px double #9e9d24;
+    color: #fff; }
+    .color-theme-md-lime .CalendarMonth__day--selected-start:active,
+    .color-theme-md-lime .CalendarMonth__day--selected-end:active,
+    .color-theme-md-lime .CalendarMonth__day--selected:active {
+      background: #9e9d24; }
+  .color-theme-md-lime .DateInput__display-text--focused {
+    border: solid transparent;
+    border-bottom: solid #f4ff81;
+    border-radius: 3px; }
+  .color-theme-md-lime .time-selector__btn .btn-icon {
+    color: #9e9d24; }
+  .color-theme-md-lime .time-selector__btn[disabled] .btn-icon {
+    color: #e6ee9c; }
+
+.color-theme-md-yellow {
+  /** from CalendarMonth.scss **/
+  /** form DateInput.scss **/
+  /** from TimePicker.scss **/ }
+  .color-theme-md-yellow .CalendarMonth__day--highlighted-calendar:active {
+    background: #fdd835; }
+  .color-theme-md-yellow .CalendarMonth__day--selected-span {
+    background: #ffee58;
+    border: 1px double #fff176;
+    color: #fff; }
+    .color-theme-md-yellow .CalendarMonth__day--selected-span.CalendarMonth__day--hovered, .color-theme-md-yellow .CalendarMonth__day--selected-span:active {
+      background: #fff176;
+      border: 1px double #f9a825; }
+    .color-theme-md-yellow .CalendarMonth__day--selected-span.CalendarMonth__day--last-in-range {
+      border-right: #f9a825; }
+  .color-theme-md-yellow .CalendarMonth__day--hovered-span,
+  .color-theme-md-yellow .CalendarMonth__day--after-hovered-start {
+    background: #fff9c4;
+    border: 1px double #fff59d;
+    color: #fdd835; }
+  .color-theme-md-yellow .CalendarMonth__day--selected-start,
+  .color-theme-md-yellow .CalendarMonth__day--selected-end,
+  .color-theme-md-yellow .CalendarMonth__day--selected {
+    background: #f9a825;
+    border: 1px double #f9a825;
+    color: #fff; }
+    .color-theme-md-yellow .CalendarMonth__day--selected-start:active,
+    .color-theme-md-yellow .CalendarMonth__day--selected-end:active,
+    .color-theme-md-yellow .CalendarMonth__day--selected:active {
+      background: #f9a825; }
+  .color-theme-md-yellow .DateInput__display-text--focused {
+    border: solid transparent;
+    border-bottom: solid #ffff8d;
+    border-radius: 3px; }
+  .color-theme-md-yellow .time-selector__btn .btn-icon {
+    color: #f9a825; }
+  .color-theme-md-yellow .time-selector__btn[disabled] .btn-icon {
+    color: #fff59d; }
+
+.color-theme-md-amber {
+  /** from CalendarMonth.scss **/
+  /** form DateInput.scss **/
+  /** from TimePicker.scss **/ }
+  .color-theme-md-amber .CalendarMonth__day--highlighted-calendar:active {
+    background: #ffb300; }
+  .color-theme-md-amber .CalendarMonth__day--selected-span {
+    background: #ffca28;
+    border: 1px double #ffd54f;
+    color: #fff; }
+    .color-theme-md-amber .CalendarMonth__day--selected-span.CalendarMonth__day--hovered, .color-theme-md-amber .CalendarMonth__day--selected-span:active {
+      background: #ffd54f;
+      border: 1px double #ff8f00; }
+    .color-theme-md-amber .CalendarMonth__day--selected-span.CalendarMonth__day--last-in-range {
+      border-right: #ff8f00; }
+  .color-theme-md-amber .CalendarMonth__day--hovered-span,
+  .color-theme-md-amber .CalendarMonth__day--after-hovered-start {
+    background: #ffecb3;
+    border: 1px double #ffe082;
+    color: #ffb300; }
+  .color-theme-md-amber .CalendarMonth__day--selected-start,
+  .color-theme-md-amber .CalendarMonth__day--selected-end,
+  .color-theme-md-amber .CalendarMonth__day--selected {
+    background: #ff8f00;
+    border: 1px double #ff8f00;
+    color: #fff; }
+    .color-theme-md-amber .CalendarMonth__day--selected-start:active,
+    .color-theme-md-amber .CalendarMonth__day--selected-end:active,
+    .color-theme-md-amber .CalendarMonth__day--selected:active {
+      background: #ff8f00; }
+  .color-theme-md-amber .DateInput__display-text--focused {
+    border: solid transparent;
+    border-bottom: solid #ffe57f;
+    border-radius: 3px; }
+  .color-theme-md-amber .time-selector__btn .btn-icon {
+    color: #ff8f00; }
+  .color-theme-md-amber .time-selector__btn[disabled] .btn-icon {
+    color: #ffe082; }
+
+.color-theme-md-orange {
+  /** from CalendarMonth.scss **/
+  /** form DateInput.scss **/
+  /** from TimePicker.scss **/ }
+  .color-theme-md-orange .CalendarMonth__day--highlighted-calendar:active {
+    background: #fb8c00; }
+  .color-theme-md-orange .CalendarMonth__day--selected-span {
+    background: #ffa726;
+    border: 1px double #ffb74d;
+    color: #fff; }
+    .color-theme-md-orange .CalendarMonth__day--selected-span.CalendarMonth__day--hovered, .color-theme-md-orange .CalendarMonth__day--selected-span:active {
+      background: #ffb74d;
+      border: 1px double #ef6c00; }
+    .color-theme-md-orange .CalendarMonth__day--selected-span.CalendarMonth__day--last-in-range {
+      border-right: #ef6c00; }
+  .color-theme-md-orange .CalendarMonth__day--hovered-span,
+  .color-theme-md-orange .CalendarMonth__day--after-hovered-start {
+    background: #fff0b2;
+    border: 1px double #ffcc80;
+    color: #fb8c00; }
+  .color-theme-md-orange .CalendarMonth__day--selected-start,
+  .color-theme-md-orange .CalendarMonth__day--selected-end,
+  .color-theme-md-orange .CalendarMonth__day--selected {
+    background: #ef6c00;
+    border: 1px double #ef6c00;
+    color: #fff; }
+    .color-theme-md-orange .CalendarMonth__day--selected-start:active,
+    .color-theme-md-orange .CalendarMonth__day--selected-end:active,
+    .color-theme-md-orange .CalendarMonth__day--selected:active {
+      background: #ef6c00; }
+  .color-theme-md-orange .DateInput__display-text--focused {
+    border: solid transparent;
+    border-bottom: solid #ffd180;
+    border-radius: 3px; }
+  .color-theme-md-orange .time-selector__btn .btn-icon {
+    color: #ef6c00; }
+  .color-theme-md-orange .time-selector__btn[disabled] .btn-icon {
+    color: #ffcc80; }
+
+.color-theme-md-deep-orange {
+  /** from CalendarMonth.scss **/
+  /** form DateInput.scss **/
+  /** from TimePicker.scss **/ }
+  .color-theme-md-deep-orange .CalendarMonth__day--highlighted-calendar:active {
+    background: #f4511e; }
+  .color-theme-md-deep-orange .CalendarMonth__day--selected-span {
+    background: #ff7043;
+    border: 1px double #ff8a65;
+    color: #fff; }
+    .color-theme-md-deep-orange .CalendarMonth__day--selected-span.CalendarMonth__day--hovered, .color-theme-md-deep-orange .CalendarMonth__day--selected-span:active {
+      background: #ff8a65;
+      border: 1px double #d84315; }
+    .color-theme-md-deep-orange .CalendarMonth__day--selected-span.CalendarMonth__day--last-in-range {
+      border-right: #d84315; }
+  .color-theme-md-deep-orange .CalendarMonth__day--hovered-span,
+  .color-theme-md-deep-orange .CalendarMonth__day--after-hovered-start {
+    background: #ffccbc;
+    border: 1px double #ffab91;
+    color: #f4511e; }
+  .color-theme-md-deep-orange .CalendarMonth__day--selected-start,
+  .color-theme-md-deep-orange .CalendarMonth__day--selected-end,
+  .color-theme-md-deep-orange .CalendarMonth__day--selected {
+    background: #d84315;
+    border: 1px double #d84315;
+    color: #fff; }
+    .color-theme-md-deep-orange .CalendarMonth__day--selected-start:active,
+    .color-theme-md-deep-orange .CalendarMonth__day--selected-end:active,
+    .color-theme-md-deep-orange .CalendarMonth__day--selected:active {
+      background: #d84315; }
+  .color-theme-md-deep-orange .DateInput__display-text--focused {
+    border: solid transparent;
+    border-bottom: solid #ff9e80;
+    border-radius: 3px; }
+  .color-theme-md-deep-orange .time-selector__btn .btn-icon {
+    color: #d84315; }
+  .color-theme-md-deep-orange .time-selector__btn[disabled] .btn-icon {
+    color: #ffab91; }
+
+.color-theme-md-brown {
+  /** from CalendarMonth.scss **/
+  /** form DateInput.scss **/
+  /** from TimePicker.scss **/ }
+  .color-theme-md-brown .CalendarMonth__day--highlighted-calendar:active {
+    background: #6d4c41; }
+  .color-theme-md-brown .CalendarMonth__day--selected-span {
+    background: #8d6e63;
+    border: 1px double #a1887f;
+    color: #fff; }
+    .color-theme-md-brown .CalendarMonth__day--selected-span.CalendarMonth__day--hovered, .color-theme-md-brown .CalendarMonth__day--selected-span:active {
+      background: #a1887f;
+      border: 1px double #4e342e; }
+    .color-theme-md-brown .CalendarMonth__day--selected-span.CalendarMonth__day--last-in-range {
+      border-right: #4e342e; }
+  .color-theme-md-brown .CalendarMonth__day--hovered-span,
+  .color-theme-md-brown .CalendarMonth__day--after-hovered-start {
+    background: #d7ccc8;
+    border: 1px double #bcaaa4;
+    color: #6d4c41; }
+  .color-theme-md-brown .CalendarMonth__day--selected-start,
+  .color-theme-md-brown .CalendarMonth__day--selected-end,
+  .color-theme-md-brown .CalendarMonth__day--selected {
+    background: #4e342e;
+    border: 1px double #4e342e;
+    color: #fff; }
+    .color-theme-md-brown .CalendarMonth__day--selected-start:active,
+    .color-theme-md-brown .CalendarMonth__day--selected-end:active,
+    .color-theme-md-brown .CalendarMonth__day--selected:active {
+      background: #4e342e; }
+  .color-theme-md-brown .DateInput__display-text--focused {
+    border: solid transparent;
+    border-bottom: solid #82b1ff;
+    border-radius: 3px; }
+  .color-theme-md-brown .time-selector__btn .btn-icon {
+    color: #4e342e; }
+  .color-theme-md-brown .time-selector__btn[disabled] .btn-icon {
+    color: #bcaaa4; }
+
+.color-theme-md-grey {
+  /** from CalendarMonth.scss **/
+  /** form DateInput.scss **/
+  /** from TimePicker.scss **/ }
+  .color-theme-md-grey .CalendarMonth__day--highlighted-calendar:active {
+    background: #757575; }
+  .color-theme-md-grey .CalendarMonth__day--selected-span {
+    background: #bdbdbd;
+    border: 1px double #e0e0e0;
+    color: #fff; }
+    .color-theme-md-grey .CalendarMonth__day--selected-span.CalendarMonth__day--hovered, .color-theme-md-grey .CalendarMonth__day--selected-span:active {
+      background: #e0e0e0;
+      border: 1px double #424242; }
+    .color-theme-md-grey .CalendarMonth__day--selected-span.CalendarMonth__day--last-in-range {
+      border-right: #424242; }
+  .color-theme-md-grey .CalendarMonth__day--hovered-span,
+  .color-theme-md-grey .CalendarMonth__day--after-hovered-start {
+    background: #f5f5f5;
+    border: 1px double #eee;
+    color: #757575; }
+  .color-theme-md-grey .CalendarMonth__day--selected-start,
+  .color-theme-md-grey .CalendarMonth__day--selected-end,
+  .color-theme-md-grey .CalendarMonth__day--selected {
+    background: #424242;
+    border: 1px double #424242;
+    color: #fff; }
+    .color-theme-md-grey .CalendarMonth__day--selected-start:active,
+    .color-theme-md-grey .CalendarMonth__day--selected-end:active,
+    .color-theme-md-grey .CalendarMonth__day--selected:active {
+      background: #424242; }
+  .color-theme-md-grey .DateInput__display-text--focused {
+    border: solid transparent;
+    border-bottom: solid #82b1ff;
+    border-radius: 3px; }
+  .color-theme-md-grey .time-selector__btn .btn-icon {
+    color: #424242; }
+  .color-theme-md-grey .time-selector__btn[disabled] .btn-icon {
+    color: #eee; }
+
+.color-theme-md-blue-grey {
+  /** from CalendarMonth.scss **/
+  /** form DateInput.scss **/
+  /** from TimePicker.scss **/ }
+  .color-theme-md-blue-grey .CalendarMonth__day--highlighted-calendar:active {
+    background: #546e7a; }
+  .color-theme-md-blue-grey .CalendarMonth__day--selected-span {
+    background: #78909c;
+    border: 1px double #90a4ae;
+    color: #fff; }
+    .color-theme-md-blue-grey .CalendarMonth__day--selected-span.CalendarMonth__day--hovered, .color-theme-md-blue-grey .CalendarMonth__day--selected-span:active {
+      background: #90a4ae;
+      border: 1px double #37474f; }
+    .color-theme-md-blue-grey .CalendarMonth__day--selected-span.CalendarMonth__day--last-in-range {
+      border-right: #37474f; }
+  .color-theme-md-blue-grey .CalendarMonth__day--hovered-span,
+  .color-theme-md-blue-grey .CalendarMonth__day--after-hovered-start {
+    background: #cfd8dc;
+    border: 1px double #b0bec5;
+    color: #546e7a; }
+  .color-theme-md-blue-grey .CalendarMonth__day--selected-start,
+  .color-theme-md-blue-grey .CalendarMonth__day--selected-end,
+  .color-theme-md-blue-grey .CalendarMonth__day--selected {
+    background: #37474f;
+    border: 1px double #37474f;
+    color: #fff; }
+    .color-theme-md-blue-grey .CalendarMonth__day--selected-start:active,
+    .color-theme-md-blue-grey .CalendarMonth__day--selected-end:active,
+    .color-theme-md-blue-grey .CalendarMonth__day--selected:active {
+      background: #37474f; }
+  .color-theme-md-blue-grey .DateInput__display-text--focused {
+    border: solid transparent;
+    border-bottom: solid #82b1ff;
+    border-radius: 3px; }
+  .color-theme-md-blue-grey .time-selector__btn .btn-icon {
+    color: #37474f; }
+  .color-theme-md-blue-grey .time-selector__btn[disabled] .btn-icon {
+    color: #b0bec5; }
