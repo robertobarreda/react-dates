@@ -24,9 +24,6 @@ class DateRangePickerWrapper extends React.Component {
   onDatesChange({ startDate, endDate }) {
     this.setState({ startDate, endDate });
     //validation
-      console.log('startDate.isSameOrAfter(endDate)', startDate.isSameOrAfter(endDate))
-      console.log('startDate', startDate)
-      console.log('endDate', endDate)
     this.setState({timeNotValid: startDate.isSameOrAfter(endDate)});
   }
 
@@ -51,6 +48,11 @@ class DateRangePickerWrapper extends React.Component {
 
   render() {
     const { focusedInput, startDate, endDate} = this.state;
+    const onOutsideClick = function(){
+      console.log('Hello form outside')
+      console.log(startDate);
+      console.log(endDate);
+    }
     return (
       <div>
         this.state.timeNotValid {this.state.timeNotValid.toString()} <br />
@@ -65,6 +67,7 @@ class DateRangePickerWrapper extends React.Component {
           focusedInput={focusedInput}
           startDate={startDate}
           endDate={endDate}
+            onOutsideClick={onOutsideClick}
         />
 
         <button onClick={this.selectLastHour}>last hour</button>

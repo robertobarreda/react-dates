@@ -100,10 +100,13 @@ export default class DateRangePicker extends React.Component {
   }
 
   onOutsideClick() {
-    const { focusedInput, onFocusChange } = this.props;
+    const { focusedInput, onFocusChange, onOutsideClick } = this.props;
     if (!focusedInput) return;
 
     onFocusChange(null);
+
+    if(onOutsideClick) { onOutsideClick() }
+
   }
 
   getDayPickerContainerClasses() {
