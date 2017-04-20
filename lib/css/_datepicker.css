@@ -327,7 +327,8 @@
 .DateInput__display-text {
   padding: 4px 8px;
   white-space: nowrap;
-  overflow: hidden; }
+  overflow: hidden;
+  border: solid transparent; }
 
 .DateInput__display-text--has-input {
   color: #484848; }
@@ -671,7 +672,6 @@
 
 /** form DateInput.scss **/
 .DateInput__display-text--focused {
-  border: solid transparent;
   border-bottom: solid #82b1ff;
   border-radius: 3px; }
 
@@ -713,7 +713,6 @@
     .color-theme-md-red .CalendarMonth__day--selected:active {
       background: #c62828; }
   .color-theme-md-red .DateInput__display-text--focused {
-    border: solid transparent;
     border-bottom: solid #ff8a80;
     border-radius: 3px; }
   .color-theme-md-red .time-selector__btn .btn-icon {
@@ -752,7 +751,6 @@
     .color-theme-md-pink .CalendarMonth__day--selected:active {
       background: #ad1457; }
   .color-theme-md-pink .DateInput__display-text--focused {
-    border: solid transparent;
     border-bottom: solid #ff80ab;
     border-radius: 3px; }
   .color-theme-md-pink .time-selector__btn .btn-icon {
@@ -791,7 +789,6 @@
     .color-theme-md-purple .CalendarMonth__day--selected:active {
       background: #6a1b9a; }
   .color-theme-md-purple .DateInput__display-text--focused {
-    border: solid transparent;
     border-bottom: solid #ea80fc;
     border-radius: 3px; }
   .color-theme-md-purple .time-selector__btn .btn-icon {
@@ -830,7 +827,6 @@
     .color-theme-md-deep-purple .CalendarMonth__day--selected:active {
       background: #4527a0; }
   .color-theme-md-deep-purple .DateInput__display-text--focused {
-    border: solid transparent;
     border-bottom: solid #b388ff;
     border-radius: 3px; }
   .color-theme-md-deep-purple .time-selector__btn .btn-icon {
@@ -869,7 +865,6 @@
     .color-theme-md-indigo .CalendarMonth__day--selected:active {
       background: #283593; }
   .color-theme-md-indigo .DateInput__display-text--focused {
-    border: solid transparent;
     border-bottom: solid #8c9eff;
     border-radius: 3px; }
   .color-theme-md-indigo .time-selector__btn .btn-icon {
@@ -908,7 +903,6 @@
     .color-theme-md-light-blue .CalendarMonth__day--selected:active {
       background: #0277bd; }
   .color-theme-md-light-blue .DateInput__display-text--focused {
-    border: solid transparent;
     border-bottom: solid #80d8ff;
     border-radius: 3px; }
   .color-theme-md-light-blue .time-selector__btn .btn-icon {
@@ -947,7 +941,6 @@
     .color-theme-md-cyan .CalendarMonth__day--selected:active {
       background: #00838f; }
   .color-theme-md-cyan .DateInput__display-text--focused {
-    border: solid transparent;
     border-bottom: solid #84ffff;
     border-radius: 3px; }
   .color-theme-md-cyan .time-selector__btn .btn-icon {
@@ -986,7 +979,6 @@
     .color-theme-md-teal .CalendarMonth__day--selected:active {
       background: #00695c; }
   .color-theme-md-teal .DateInput__display-text--focused {
-    border: solid transparent;
     border-bottom: solid #a7ffeb;
     border-radius: 3px; }
   .color-theme-md-teal .time-selector__btn .btn-icon {
@@ -1025,7 +1017,6 @@
     .color-theme-md-green .CalendarMonth__day--selected:active {
       background: #2e7d32; }
   .color-theme-md-green .DateInput__display-text--focused {
-    border: solid transparent;
     border-bottom: solid #b9f6ca;
     border-radius: 3px; }
   .color-theme-md-green .time-selector__btn .btn-icon {
@@ -1064,7 +1055,6 @@
     .color-theme-md-light-green .CalendarMonth__day--selected:active {
       background: #558b2f; }
   .color-theme-md-light-green .DateInput__display-text--focused {
-    border: solid transparent;
     border-bottom: solid #ccff90;
     border-radius: 3px; }
   .color-theme-md-light-green .time-selector__btn .btn-icon {
@@ -1103,7 +1093,6 @@
     .color-theme-md-lime .CalendarMonth__day--selected:active {
       background: #9e9d24; }
   .color-theme-md-lime .DateInput__display-text--focused {
-    border: solid transparent;
     border-bottom: solid #f4ff81;
     border-radius: 3px; }
   .color-theme-md-lime .time-selector__btn .btn-icon {
@@ -1142,7 +1131,6 @@
     .color-theme-md-yellow .CalendarMonth__day--selected:active {
       background: #f9a825; }
   .color-theme-md-yellow .DateInput__display-text--focused {
-    border: solid transparent;
     border-bottom: solid #ffff8d;
     border-radius: 3px; }
   .color-theme-md-yellow .time-selector__btn .btn-icon {
@@ -1181,7 +1169,6 @@
     .color-theme-md-amber .CalendarMonth__day--selected:active {
       background: #ff8f00; }
   .color-theme-md-amber .DateInput__display-text--focused {
-    border: solid transparent;
     border-bottom: solid #ffe57f;
     border-radius: 3px; }
   .color-theme-md-amber .time-selector__btn .btn-icon {
@@ -1220,7 +1207,6 @@
     .color-theme-md-orange .CalendarMonth__day--selected:active {
       background: #ef6c00; }
   .color-theme-md-orange .DateInput__display-text--focused {
-    border: solid transparent;
     border-bottom: solid #ffd180;
     border-radius: 3px; }
   .color-theme-md-orange .time-selector__btn .btn-icon {
@@ -1259,7 +1245,6 @@
     .color-theme-md-deep-orange .CalendarMonth__day--selected:active {
       background: #d84315; }
   .color-theme-md-deep-orange .DateInput__display-text--focused {
-    border: solid transparent;
     border-bottom: solid #ff9e80;
     border-radius: 3px; }
   .color-theme-md-deep-orange .time-selector__btn .btn-icon {
@@ -1298,7 +1283,6 @@
     .color-theme-md-brown .CalendarMonth__day--selected:active {
       background: #4e342e; }
   .color-theme-md-brown .DateInput__display-text--focused {
-    border: solid transparent;
     border-bottom: solid #82b1ff;
     border-radius: 3px; }
   .color-theme-md-brown .time-selector__btn .btn-icon {
@@ -1337,7 +1321,6 @@
     .color-theme-md-grey .CalendarMonth__day--selected:active {
       background: #424242; }
   .color-theme-md-grey .DateInput__display-text--focused {
-    border: solid transparent;
     border-bottom: solid #82b1ff;
     border-radius: 3px; }
   .color-theme-md-grey .time-selector__btn .btn-icon {
@@ -1376,7 +1359,6 @@
     .color-theme-md-blue-grey .CalendarMonth__day--selected:active {
       background: #37474f; }
   .color-theme-md-blue-grey .DateInput__display-text--focused {
-    border: solid transparent;
     border-bottom: solid #82b1ff;
     border-radius: 3px; }
   .color-theme-md-blue-grey .time-selector__btn .btn-icon {

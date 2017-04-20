@@ -57,6 +57,7 @@ $caret-top: $react-dates-spacing-vertical-picker - $react-dates-width-tooltip-ar
   padding: 4px 8px;
   white-space: nowrap;
   overflow: hidden;
+  border: solid transparent;
 }
 
 .DateInput__display-text--has-input {
