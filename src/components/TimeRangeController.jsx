@@ -13,7 +13,7 @@ export default class TimeRangeController extends React.Component {
 
     onStartTimeChange(time){
         let  { endDate }  = this.props;
-        if(endDate.isSameOrBefore(time)){
+        if(endDate && endDate.isSameOrBefore(time)){
             endDate = moment(time).add(this.props.step, 'm')
         }
         this.props.onDatesChange({startDate: time, endDate})
