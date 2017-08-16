@@ -1,4 +1,5 @@
-@import '../node_modules/react-md/src/scss/_colors.scss';
+@import '~react-md/src/scss/colors';
+@import 'Colors';
 
 @function get-md-color($color-name, $swatch, $accent: false){
   $name: 'md-#{$color-name}-#{if($accent, 'a-', '')}#{$swatch}';
@@ -20,8 +21,6 @@
     $react-dates-color-secondary: get-md-color($color-name, '600', false);
     $react-dates-color-text-focus: get-md-color($color-name, '700', false);
     $react-dates-color-focus: get-md-color($color-name, '100', true);
-
-    @import 'Colors';
   }
 }
 
