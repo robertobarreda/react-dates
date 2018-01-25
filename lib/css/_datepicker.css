@@ -1282,7 +1282,7 @@
     .color-theme-md-brown .CalendarMonth__day--selected:active {
       background: #4e342e; }
   .color-theme-md-brown .DateInput__display-text--focused {
-    border-bottom: solid #82b1ff;
+    border-bottom: solid;
     border-radius: 3px; }
   .color-theme-md-brown .time-selector__btn .btn-icon {
     color: #4e342e; }
@@ -1320,7 +1320,7 @@
     .color-theme-md-grey .CalendarMonth__day--selected:active {
       background: #424242; }
   .color-theme-md-grey .DateInput__display-text--focused {
-    border-bottom: solid #82b1ff;
+    border-bottom: solid;
     border-radius: 3px; }
   .color-theme-md-grey .time-selector__btn .btn-icon {
     color: #424242; }
@@ -1358,7 +1358,7 @@
     .color-theme-md-blue-grey .CalendarMonth__day--selected:active {
       background: #37474f; }
   .color-theme-md-blue-grey .DateInput__display-text--focused {
-    border-bottom: solid #82b1ff;
+    border-bottom: solid;
     border-radius: 3px; }
   .color-theme-md-blue-grey .time-selector__btn .btn-icon {
     color: #37474f; }
