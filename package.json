@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run clean && npm run build:js && npm run build:css && npm run build:svg",
     "build:js": "babel src/ -d lib/ --ignore src/components",
-    "build:css": "node-sass css/styles.scss lib/css/_datepicker.css",
+    "build:css": "node-sass --importer=node_modules/node-sass-tilde-importer css/styles.scss lib/css/_datepicker.css",
     "build:svg": "webpack",
     "clean": "rimraf lib",
     "cover": "npm run cover:clean && npm run cover:mocha && npm run cover:check",
@@ -79,6 +79,7 @@
     "mocha-wrap": "^2.1.0",
     "moment": "^2.17.1",
     "node-sass": "^4.4.0",
+    "node-sass-tilde-importer": "^1.0.1",
     "raw-loader": "^0.5.1",
     "react": "^15.4.2",
     "react-addons-shallow-compare": "^15.4.2",
@@ -98,7 +99,7 @@
     "array-includes": "^3.0.2",
     "classnames": "^2.2.5",
     "react-fontawesome": "^1.5.0",
-    "react-md": "^1.0.11",
+    "react-md": "^1.2.11",
     "react-moment-proptypes": "^1.2.1",
     "react-portal": "^3.0.0"
   },
